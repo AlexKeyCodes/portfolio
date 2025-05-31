@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build:sass": "sass src/assets/sass/styles.scss src/assets/css/styles.css",
-    "build:css": "npm run build:sass && postcss src/assets/css/styles.css -o src/assets/css/styles.css",
+    "build:sass": "npx sass src/assets/sass/styles.scss src/assets/css/styles.css",
+    "build:css": "npm run build:sass && npx postcss src/assets/css/styles.css -o src/assets/css/styles.css",
     "build": "npm run build:css && eleventy",
     "serve": "npm run build:css && eleventy --serve",
-    "watch:sass": "sass src/assets/sass/styles.scss src/assets/css/styles.css --watch",
-    "watch:css": "postcss src/assets/css/styles.css -o src/assets/css/styles.css --watch",
+    "watch:sass": "npx sass src/assets/sass/styles.scss src/assets/css/styles.css --watch",
+    "watch:css": "npx postcss src/assets/css/styles.css -o src/assets/css/styles.css --watch",
     "watch": "npm-run-all --parallel watch:sass watch:css serve"
   },
   "keywords": [],
