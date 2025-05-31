@@ -2,44 +2,592 @@
 title: Home
 ---
 
-{% extends "layouts/base.njk" %}
+{% extends "layouts/base.njk" %} {% block content %}
+<div class="bg-white">
+  <div class="relative isolate px-6 pt-10 lg:pb-14 sm:pt-20 lg:px-8">
+    <div
+      class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+      aria-hidden="true"
+    >
+      <div
+        class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+        style="
+          clip-path: polygon(
+            74.1% 44.1%,
+            100% 61.6%,
+            97.5% 26.9%,
+            85.5% 0.1%,
+            80.7% 2%,
+            72.5% 32.5%,
+            60.2% 62.4%,
+            52.4% 68.1%,
+            47.5% 58.3%,
+            45.2% 34.5%,
+            27.5% 76.7%,
+            0.1% 64.9%,
+            17.9% 100%,
+            27.6% 76.8%,
+            76.1% 97.7%,
+            74.1% 44.1%
+          );
+        "
+      ></div>
+    </div>
+    <div
+      class="relative z-10 grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12"
+    >
+      <div class="mr-auto lg:col-span-6 lg:flex lg:items-center">
+        <div>
+          <h1
+            class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl xl:text-6xl"
+          >
+            Hi, I'm Alex 👋
+          </h1>
+          <p
+            class="max-w-2xl mb-6 font-light text-gray-600 lg:mb-8 md:text-lg lg:text-xl"
+          >
+            I'm a freelance full-stack developer who loves building Rails apps.
+            Here you'll find my latest projects, blog posts, and tutorials to
+            help fellow devs learn something new.
+          </p>
+          <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+            <a
+              class="w-full md:w-auto text-center rounded-md bg-indigo-600 px-5 py-3 text-md font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              href="/contact"
+              >Hire Me!</a
+            >
+            <div>
+              <div
+                class="flex items-center justify-center gap-3 lg:justify-start"
+              >
+                <div class="flex -space-x-3 overflow-hidden">
+                  <img
+                    width="128"
+                    height="42"
+                    alt="Owner of Austin City Guide"
+                    src="/assets/images/review_profiles.png"
+                  />
+                </div>
 
-{% block content %}
-  <section class="bg-white dark:bg-gray-900">
-    <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-      <div class="mr-auto place-self-center lg:col-span-7">
-        <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Payments tool for software companies</h1>
-        <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack.</p>
-        <a href="#" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                Get started
-                <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-          </svg>
-        </a>
-        <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                Speak to Sales
-            </a>
+                <div class="w-px h-8 bg-gray-200"></div>
+
+                <div>
+                  <div class="flex items-center gap-1.5">
+                    <div class="flex items-center gap-0.5">
+                      <svg
+                        aria-hidden="true"
+                        class="w-5 h-5 text-yellow-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                        />
+                      </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="w-5 h-5 text-yellow-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                        />
+                      </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="w-5 h-5 text-yellow-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                        />
+                      </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="w-5 h-5 text-yellow-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                        />
+                      </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="w-5 h-5 text-yellow-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                        />
+                      </svg>
+                    </div>
+                    <span class="text-base font-normal text-gray-500">
+                      5.0
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-        <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png" alt="mockup">
+      <div class="pt-8 lg:col-span-6 lg:flex lg:items-center">
+        <picture>
+          <!-- Source for larger screens (e.g. desktop) -->
+          <source
+            media="(min-width: 1024px)"
+            width="624"
+            height="428"
+            srcset="/assets/images/alex_profile.jpg"
+          />
+          <!-- Fallback for mobile or if no media query matches -->
+          <img
+            src="/assets/images/alex_profile.jpg"
+            width="310"
+            height="213"
+            class="h-auto max-w-full md:max-w-xl md:mx-auto lg:max-w-full rounded-lg shadow-lg"
+            alt="Responsive design demonstration."
+          />
+        </picture>
       </div>
     </div>
-  </section>
-
-  <section class="bg-white dark:bg-gray-900">
-    <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-      <img class="w-full dark:hidden" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg" alt="dashboard image">
-      <img class="w-full hidden dark:block" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup-dark.svg" alt="dashboard image">
-      <div class="mt-4 md:mt-0">
-        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Let's create more tools and ideas that brings us together.</h2>
-        <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">Flowbite helps you connect with friends and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.</p>
-        <a href="#" class="inline-flex items-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary-900">
-                Get started
-                <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-          </svg>
-        </a>
+    <div
+      class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+      aria-hidden="true"
+    >
+      <div
+        class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+        style="
+          clip-path: polygon(
+            74.1% 44.1%,
+            100% 61.6%,
+            97.5% 26.9%,
+            85.5% 0.1%,
+            80.7% 2%,
+            72.5% 32.5%,
+            60.2% 62.4%,
+            52.4% 68.1%,
+            47.5% 58.3%,
+            45.2% 34.5%,
+            27.5% 76.7%,
+            0.1% 64.9%,
+            17.9% 100%,
+            27.6% 76.8%,
+            76.1% 97.7%,
+            74.1% 44.1%
+          );
+        "
+      ></div>
+    </div>
+  </div>
+</div>
+<div class="bg-white py-24 sm:py-32" id="pricing">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-4xl text-center">
+      <h2 class="text-base font-semibold leading-7 text-indigo-600">
+        Portfolio
+      </h2>
+      <p
+        class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl"
+      >
+        View Examples Of My Work
+      </p>
+    </div>
+    <p
+      class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600"
+    >
+      Below are a few examples of websites that I've built. Feel free to scroll
+      through to see the full site.
+    </p>
+    <div class="flex flex-wrap justify-between isolate mx-auto mt-20 gap-8">
+      <div class="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
+        <svg
+          viewBox="0 0 366 729"
+          role="img"
+          class="mx-auto w-[22.875rem] max-w-full drop-shadow-xl"
+        >
+          <title>Gourmet Garlic Gardens Screenshot</title>
+          <defs>
+            <clipPath id="2ade4387-9c63-4fc4-b754-10e687a0d332">
+              <rect width="316" height="684" rx="36" />
+            </clipPath>
+          </defs>
+          <path
+            fill="#4B5563"
+            d="M363.315 64.213C363.315 22.99 341.312 1 300.092 1H66.751C25.53 1 3.528 22.99 3.528 64.213v44.68l-.857.143A2 2 0 0 0 1 111.009v24.611a2 2 0 0 0 1.671 1.973l.95.158a2.26 2.26 0 0 1-.093.236v26.173c.212.1.398.296.541.643l-1.398.233A2 2 0 0 0 1 167.009v47.611a2 2 0 0 0 1.671 1.973l1.368.228c-.139.319-.314.533-.511.653v16.637c.221.104.414.313.56.689l-1.417.236A2 2 0 0 0 1 237.009v47.611a2 2 0 0 0 1.671 1.973l1.347.225c-.135.294-.302.493-.49.607v377.681c0 41.213 22 63.208 63.223 63.208h95.074c.947-.504 2.717-.843 4.745-.843l.141.001h.194l.086-.001 33.704.005c1.849.043 3.442.37 4.323.838h95.074c41.222 0 63.223-21.999 63.223-63.212v-394.63c-.259-.275-.48-.796-.63-1.47l-.011-.133 1.655-.276A2 2 0 0 0 366 266.62v-77.611a2 2 0 0 0-1.671-1.973l-1.712-.285c.148-.839.396-1.491.698-1.811V64.213Z"
+          />
+          <path
+            fill="#343E4E"
+            d="M16 59c0-23.748 19.252-43 43-43h246c23.748 0 43 19.252 43 43v615c0 23.196-18.804 42-42 42H58c-23.196 0-42-18.804-42-42V59Z"
+          />
+          <foreignObject
+            width="316"
+            height="684"
+            transform="translate(24 24)"
+            clip-path="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)"
+          >
+            <div
+              xmlns="http://www.w3.org/1999/xhtml"
+              style="
+                width: 316px;
+                height: 684px;
+                overflow-y: scroll;
+                border-radius: 35px;
+              "
+            >
+              <img
+                src="/assets/images/ggg_screenshot.png"
+                alt="Gourmet Garlic Gardens Screenshot"
+                style="width: 100%"
+              />
+            </div>
+          </foreignObject>
+        </svg>
+      </div>
+      <div class="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
+        <svg
+          viewBox="0 0 366 729"
+          role="img"
+          class="mx-auto w-[22.875rem] max-w-full drop-shadow-xl"
+        >
+          <title>Austin City Guide Screenshot</title>
+          <defs>
+            <clipPath id="2ade4387-9c63-4fc4-b754-10e687a0d332">
+              <rect width="316" height="684" rx="36" />
+            </clipPath>
+          </defs>
+          <path
+            fill="#4B5563"
+            d="M363.315 64.213C363.315 22.99 341.312 1 300.092 1H66.751C25.53 1 3.528 22.99 3.528 64.213v44.68l-.857.143A2 2 0 0 0 1 111.009v24.611a2 2 0 0 0 1.671 1.973l.95.158a2.26 2.26 0 0 1-.093.236v26.173c.212.1.398.296.541.643l-1.398.233A2 2 0 0 0 1 167.009v47.611a2 2 0 0 0 1.671 1.973l1.368.228c-.139.319-.314.533-.511.653v16.637c.221.104.414.313.56.689l-1.417.236A2 2 0 0 0 1 237.009v47.611a2 2 0 0 0 1.671 1.973l1.347.225c-.135.294-.302.493-.49.607v377.681c0 41.213 22 63.208 63.223 63.208h95.074c.947-.504 2.717-.843 4.745-.843l.141.001h.194l.086-.001 33.704.005c1.849.043 3.442.37 4.323.838h95.074c41.222 0 63.223-21.999 63.223-63.212v-394.63c-.259-.275-.48-.796-.63-1.47l-.011-.133 1.655-.276A2 2 0 0 0 366 266.62v-77.611a2 2 0 0 0-1.671-1.973l-1.712-.285c.148-.839.396-1.491.698-1.811V64.213Z"
+          />
+          <path
+            fill="#343E4E"
+            d="M16 59c0-23.748 19.252-43 43-43h246c23.748 0 43 19.252 43 43v615c0 23.196-18.804 42-42 42H58c-23.196 0-42-18.804-42-42V59Z"
+          />
+          <foreignObject
+            width="316"
+            height="684"
+            transform="translate(24 24)"
+            clip-path="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)"
+          >
+            <div
+              xmlns="http://www.w3.org/1999/xhtml"
+              style="
+                width: 316px;
+                height: 684px;
+                overflow-y: scroll;
+                border-radius: 35px;
+              "
+            >
+              <img
+                src="/assets/images/acg_screenshot.png"
+                alt="Austin City Guide Screenshot"
+                style="width: 100%"
+              />
+            </div>
+          </foreignObject>
+        </svg>
+      </div>
+      <div class="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
+        <svg
+          viewBox="0 0 366 729"
+          role="img"
+          class="mx-auto w-[22.875rem] max-w-full drop-shadow-xl"
+        >
+          <title>Nikos Screenshot</title>
+          <defs>
+            <clipPath id="2ade4387-9c63-4fc4-b754-10e687a0d332">
+              <rect width="316" height="684" rx="36" />
+            </clipPath>
+          </defs>
+          <path
+            fill="#4B5563"
+            d="M363.315 64.213C363.315 22.99 341.312 1 300.092 1H66.751C25.53 1 3.528 22.99 3.528 64.213v44.68l-.857.143A2 2 0 0 0 1 111.009v24.611a2 2 0 0 0 1.671 1.973l.95.158a2.26 2.26 0 0 1-.093.236v26.173c.212.1.398.296.541.643l-1.398.233A2 2 0 0 0 1 167.009v47.611a2 2 0 0 0 1.671 1.973l1.368.228c-.139.319-.314.533-.511.653v16.637c.221.104.414.313.56.689l-1.417.236A2 2 0 0 0 1 237.009v47.611a2 2 0 0 0 1.671 1.973l1.347.225c-.135.294-.302.493-.49.607v377.681c0 41.213 22 63.208 63.223 63.208h95.074c.947-.504 2.717-.843 4.745-.843l.141.001h.194l.086-.001 33.704.005c1.849.043 3.442.37 4.323.838h95.074c41.222 0 63.223-21.999 63.223-63.212v-394.63c-.259-.275-.48-.796-.63-1.47l-.011-.133 1.655-.276A2 2 0 0 0 366 266.62v-77.611a2 2 0 0 0-1.671-1.973l-1.712-.285c.148-.839.396-1.491.698-1.811V64.213Z"
+          />
+          <path
+            fill="#343E4E"
+            d="M16 59c0-23.748 19.252-43 43-43h246c23.748 0 43 19.252 43 43v615c0 23.196-18.804 42-42 42H58c-23.196 0-42-18.804-42-42V59Z"
+          />
+          <foreignObject
+            width="316"
+            height="684"
+            transform="translate(24 24)"
+            clip-path="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)"
+          >
+            <div
+              xmlns="http://www.w3.org/1999/xhtml"
+              style="
+                width: 316px;
+                height: 684px;
+                overflow-y: scroll;
+                border-radius: 35px;
+              "
+            >
+              <img
+                src="/assets/images/nikos_screenshot.png"
+                alt="Nikos Screenshot"
+                style="width: 100%"
+              />
+            </div>
+          </foreignObject>
+        </svg>
       </div>
     </div>
-  </section>
+  </div>
+</div>
+<div class="relative isolate bg-white pb-32 pt-24 sm:pt-32">
+  <div
+    class="absolute inset-x-0 top-1/2 -z-10 -translate-y-1/2 transform-gpu overflow-hidden opacity-30 blur-3xl"
+    aria-hidden="true"
+  >
+    <div
+      class="ml-[max(50%,38rem)] aspect-[1313/771] w-[82.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc]"
+      style="
+        clip-path: polygon(
+          74.1% 44.1%,
+          100% 61.6%,
+          97.5% 26.9%,
+          85.5% 0.1%,
+          80.7% 2%,
+          72.5% 32.5%,
+          60.2% 62.4%,
+          52.4% 68.1%,
+          47.5% 58.3%,
+          45.2% 34.5%,
+          27.5% 76.7%,
+          0.1% 64.9%,
+          17.9% 100%,
+          27.6% 76.8%,
+          76.1% 97.7%,
+          74.1% 44.1%
+        );
+      "
+    ></div>
+  </div>
+  <div
+    class="absolute inset-x-0 top-0 -z-10 flex transform-gpu overflow-hidden pt-32 opacity-25 blur-3xl sm:pt-40 xl:justify-end"
+    aria-hidden="true"
+  >
+    <div
+      class="ml-[-22rem] aspect-[1313/771] w-[82.0625rem] flex-none origin-top-right rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] xl:ml-0 xl:mr-[calc(50%-12rem)]"
+      style="
+        clip-path: polygon(
+          74.1% 44.1%,
+          100% 61.6%,
+          97.5% 26.9%,
+          85.5% 0.1%,
+          80.7% 2%,
+          72.5% 32.5%,
+          60.2% 62.4%,
+          52.4% 68.1%,
+          47.5% 58.3%,
+          45.2% 34.5%,
+          27.5% 76.7%,
+          0.1% 64.9%,
+          17.9% 100%,
+          27.6% 76.8%,
+          76.1% 97.7%,
+          74.1% 44.1%
+        );
+      "
+    ></div>
+  </div>
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-xl text-center lg:max-w-3xl">
+      <h2
+        class="text-lg font-semibold leading-8 tracking-tight text-indigo-600"
+      >
+        Testimonials
+      </h2>
+      <p
+        class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+      >
+        Hear from the Clients I've Helped Grow
+      </p>
+    </div>
+    <div class="w-full flex flex-wrap lg:flex-nowrap gap-8 mt-16 lg:mt-20">
+      <figure
+        class="flex flex-col justify-between w-full lg:w-1/4 rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5"
+      >
+        <blockquote class="text-gray-900">
+          <p>
+            “We initially built our site on WordPress, but it became a hassle to
+            manage. Alex revamped the website, making it look better and rank
+            higher on Google. Now, he handles everything, so we can focus on
+            running our haunted tours without any tech worries.”
+          </p>
+        </blockquote>
+        <figcaption class="mt-6 flex items-center gap-x-4">
+          <img
+            class="h-10 w-10 rounded-full bg-gray-50"
+            alt="Owner of HauntedATX"
+            src="/assets/images/testimonials/angela.jpg"
+          />
+          <div>
+            <div class="font-semibold">Angela Hall</div>
+            <a
+              href="https://www.hauntedatx.com"
+              target="_blank"
+              class="text-indigo-600 font-semibold hover:underline"
+              >Haunted ATX</a
+            >
+          </div>
+        </figcaption>
+      </figure>
+      <figure
+        class="flex flex-col justify-between w-full lg:w-1/2 rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5"
+      >
+        <blockquote
+          class="p-6 text-lg font-semibold leading-7 tracking-tight text-gray-900 sm:p-12 sm:text-xl sm:leading-8"
+        >
+          <p>
+            “Alex didn't just deliver a great looking website; within six
+            months, our Google ranking jumped from 11 to 1! Thanks to that
+            Austin City Guide transformed from a side hustle into my main
+            business.”
+          </p>
+        </blockquote>
+        <figcaption
+          class="flex flex-wrap items-center gap-x-4 gap-y-4 border-t border-gray-900/10 px-6 py-4 sm:flex-nowrap"
+        >
+          <img
+            class="h-10 w-10 rounded-full bg-gray-50"
+            alt="Owner of Austin City Guide"
+            src="/assets/images/testimonials/ivan.jpg"
+          />
+          <div class="flex-auto">
+            <div class="font-semibold">Ivan Collins</div>
+            <a
+              href="https://austincityguide.com"
+              target="_blank"
+              class="text-indigo-600 font-semibold hover:underline"
+              >Austin City Guide</a
+            >
+          </div>
+          <img
+            class="h-10 w-auto flex-none"
+            alt="Austin City Guide Logo"
+            src="/assets/images/acg_logo.png"
+          />
+        </figcaption>
+      </figure>
+      <figure
+        class="flex flex-col justify-between w-full lg:w-1/4 rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5"
+      >
+        <blockquote class="text-gray-900">
+          <p>
+            “Our bookings increased by 30% in the first summer after our website
+            was built. Working with Alex has been fantastic—He handles
+            everything, allowing me to focus on running the campground.”
+          </p>
+        </blockquote>
+        <figcaption class="mt-6 flex items-center gap-x-4">
+          <div>
+            <div class="font-semibold">Jeff</div>
+            <a
+              href="https://www.arkriverrim.com"
+              target="_blank"
+              class="text-indigo-600 font-semibold hover:underline"
+              >Arkansas River Rim</a
+            >
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="w-full flex flex-wrap lg:flex-nowrap gap-8 mt-8">
+      <figure
+        class="flex flex-col justify-between w-full lg:w-1/3 rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5"
+      >
+        <blockquote class="text-gray-900">
+          <p>
+            “I’m a farmer, not a tech guy. Alex set me up with a plan to reach
+            more customers and turned my website into something that really
+            works for the business. Sales have gone up, and I get to focus on
+            what I’m best at—growing great garlic.”
+          </p>
+        </blockquote>
+        <figcaption class="mt-6 flex items-center gap-x-4">
+          <img
+            class="h-10 w-10 rounded-full bg-gray-50"
+            alt="Owner of Gourmet Garlic Gardens"
+            src="/assets/images/testimonials/ben.jpeg"
+          />
+          <div>
+            <div class="font-semibold">Ben Ronniger</div>
+            <a
+              href="https://www.gourmetgarlicgardens.com"
+              target="_blank"
+              class="text-indigo-600 font-semibold hover:underline"
+              >Gourmet Garlic Gardens</a
+            >
+          </div>
+        </figcaption>
+      </figure>
+      <figure
+        class="flex flex-col justify-between w-full lg:w-1/3 rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5"
+      >
+        <blockquote class="text-gray-900">
+          <p>
+            “Alex built our entire web app, from a custom reservation system to
+            table management and online ordering. Just the online ordering has
+            brought in over seven figures in revenue. His work has made a huge
+            difference in how we run things.”
+          </p>
+        </blockquote>
+        <figcaption class="mt-6 flex items-center gap-x-4">
+          <img
+            class="h-10 w-10 rounded-full bg-gray-50"
+            alt="Owner of 88 Restaurants"
+            src="/assets/images/testimonials/matt.jpeg"
+          />
+          <div>
+            <div class="font-semibold">Matt Kellner</div>
+            <a
+              href="https://www.88restaurants.com"
+              target="_blank"
+              class="text-indigo-600 font-semibold hover:underline"
+              >88 Restaurants</a
+            >
+          </div>
+        </figcaption>
+      </figure>
+      <figure
+        class="flex flex-col justify-between w-full lg:w-1/3 rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5"
+      >
+        <blockquote class="text-gray-900">
+          <p>
+            “Alex built our ticket sales system, which has made handling
+            bookings way easier for our clients. His work has been a big part of
+            our platform’s success and has really helped us stand out.”
+          </p>
+        </blockquote>
+        <figcaption class="mt-6 flex items-center gap-x-4">
+          <img
+            class="h-10 w-10 rounded-full bg-gray-50"
+            alt="Owner of Reservation Genie"
+            src="/assets/images/testimonials/sarah.png"
+          />
+          <div>
+            <div class="font-semibold">Sarah Maples</div>
+            <a
+              href="https://www.reservationgenie.com"
+              target="_blank"
+              class="text-indigo-600 font-semibold hover:underline"
+              >Reservation Genie</a
+            >
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
 {% endblock %}

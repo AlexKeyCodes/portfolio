@@ -1,10 +1,10 @@
 module.exports = {
-  name: "Client Name",
+  name: "Alexander Key",
   address: {
-    city: "City",
-    state: "State",
-    zip: "12345",
+    city: "Austin",
+    state: "TX",
+    zip: "78745",
   },
   phone: "123-456-7890",
-  domain: "https://example.com",
+  domain: "https://alexanderkey.com",
 };
