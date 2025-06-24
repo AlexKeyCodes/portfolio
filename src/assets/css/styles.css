@@ -709,11 +709,11 @@ video {
 .w-\[22\.875rem\] {
   width: 22.875rem;
 }
+.w-\[32rem\] {
+  width: 32rem;
+}
 .w-\[36\.125rem\] {
   width: 36.125rem;
-}
-.w-\[48rem\] {
-  width: 48rem;
 }
 .w-\[82\.0625rem\] {
   width: 82.0625rem;
@@ -859,6 +859,9 @@ video {
 }
 .overflow-y-auto {
   overflow-y: auto;
+}
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 .rounded-2xl {
   border-radius: 1rem;
