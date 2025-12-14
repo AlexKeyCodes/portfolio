@@ -1,137 +1,123 @@
-# 11ty Template Project
+# Alexander Key Portfolio
 
-This project is a customizable starter template for creating static websites using [11ty (Eleventy)](https://www.11ty.dev/), with integrations for [Nunjucks](https://mozilla.github.io/nunjucks/), [TailwindCSS](https://tailwindcss.com/), [SASS](https://sass-lang.com/), and JavaScript. The template also includes plugins for navigation, sitemap generation, and file minification. It's designed for rapid development and deployment on Netlify.
+Personal portfolio website built with 11ty (Eleventy), TailwindCSS, and Nunjucks. Live at [alexanderkey.com](https://www.alexanderkey.com).
 
-## Table of Contents
+## Quick Start
 
-- [Features](#features)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-- [Available Scripts](#available-scripts)
-- [Customization](#customization)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
-- [License](#license)
+```bash
+# Install dependencies
+npm install
 
-## Features
+# Start development server (with live reload)
+npm run serve
 
-- **11ty (Eleventy):** Static site generation with flexible templating.
-- **Nunjucks:** Powerful templating engine with support for logic and partials.
-- **TailwindCSS:** Utility-first CSS framework with SASS integration.
-- **SASS:** Extendable CSS with variables, nesting, and more.
-- **JavaScript:** Custom scripts to enhance functionality.
-- **11ty Plugins:**
-  - **eleventy-navigation:** Simple, powerful navigation.
-  - **eleventy-plugin-sitemap:** Generate a sitemap for SEO.
-  - **eleventy-plugin-files-minifier:** Minify HTML, CSS, and JavaScript files for production.
+# Build for production
+npm run build
+```
+
+The dev server runs at http://localhost:8080
+
+## Available Commands
+
+| Command | Description |
+|---------|-------------|
+| `npm run serve` | Start dev server with CSS watch and live reload |
+| `npm run watch` | Same as `serve` (alias) |
+| `npm run build` | Compile CSS and build static site to `dist/` |
+| `npm run build:css` | Compile SCSS to CSS via PostCSS (includes TailwindCSS) |
+| `npm run watch:css` | Watch SCSS file and recompile on changes |
+| `npm run serve:eleventy` | Start Eleventy server only (no CSS watch) |
 
 ## Project Structure
 
 ```
-my-11ty-template/
-├── .eleventy.js # Eleventy configuration
-├── .gitignore # Files and directories to ignore in version control
-├── netlify.toml # Netlify deployment configuration
-├── package.json # Project dependencies and scripts
-├── postcss.config.js # PostCSS configuration for TailwindCSS
-├── tailwind.config.js # TailwindCSS configuration
-├── src/ # Source files
-│ ├── assets/ # Static assets (CSS, JS, images, etc.)
-│ │ ├── css/ # Compiled CSS
-│ │ ├── favicons/ # Favicons
-│ │ ├── fonts/ # Custom fonts
-│ │ ├── images/ # Images
-│ │ ├── js/ # JavaScript files
-│ │ ├── sass/ # SASS files
-│ │ └── svgs/ # SVG files
-│ ├── \_data/ # Global data accessible in templates
-│ │ └── client.js # Client-specific data
-│ ├── \_includes/ # Reusable templates and components
-│ │ ├── layouts/ # Layout files
-│ │ └── components/ # Template components (header, footer, etc.)
-│ ├── pages/ # Static pages (e.g., About, Contact)
-│ └── posts/ # Blog posts or other content
-└── dist/ # Output directory (auto-generated)
+src/
+├── _data/                  # Global data
+│   ├── client.js          # Client info (name, address, domain, phone)
+│   └── global.js          # Utilities (currentYear, etc.)
+├── _includes/
+│   ├── layouts/
+│   │   └── base.njk       # Base HTML layout
+│   └── components/
+│       ├── header.njk
+│       ├── footer.njk
+│       └── homepage/      # Homepage sections
+│           ├── hero.njk
+│           ├── portfolio.njk
+│           ├── testimonials.njk
+│           ├── mobile_showcase.njk
+│           └── modal.njk
+├── assets/
+│   ├── css/               # Compiled CSS output
+│   ├── sass/              # SASS source (styles.scss)
+│   ├── js/                # JavaScript (main.js, modal.js)
+│   ├── images/            # Image assets
+│   └── favicons/          # Favicon files
+├── index.njk              # Homepage
+├── robots.txt
+└── sitemap.xml
+
+dist/                      # Build output (gitignored)
 ```
 
-## Getting Started
+## Tech Stack
 
-### Prerequisites
+- **Eleventy 2.0.1** - Static site generator
+- **Nunjucks** - Templating engine
+- **TailwindCSS 3.4.10** - Utility-first CSS framework
+- **SASS 1.77.8** - CSS preprocessor
+- **PostCSS** - CSS transformations (Autoprefixer)
 
-Ensure you have the following installed:
+### Plugins
+- `@11ty/eleventy-navigation` - Navigation helpers
+- `@quasibit/eleventy-plugin-sitemap` - Auto-generates sitemap.xml
+- `@sherby/eleventy-plugin-files-minifier` - Minifies HTML/CSS/JS
 
-- [Node.js](https://nodejs.org/) (v16 or higher recommended)
-- [npm](https://www.npmjs.com/) (comes with Node.js)
+## Development Notes
 
-### Installation
+### CSS Build Process
+SCSS → PostCSS (TailwindCSS + Autoprefixer) → CSS
 
-### Use this template:
-1. Click the green "Use this template" button at the top of this repository
-2. Choose "Create a new repository"
-3. Name your new repository (e.g., `client-website`)
-4. Clone your new repository:
-
-```
-git clone https://github.com/your-username/client-website.git
-cd client-website
-```
-
-### Install dependencies:
-
-```
-npm install
+The SASS file (`src/assets/sass/styles.scss`) only imports Tailwind directives:
+```scss
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 ```
 
-### Development
+### Dark Mode
+TailwindCSS is configured with class-based dark mode. Add `dark` class to a parent element to enable dark mode styles.
 
-To start the development server with live reloading:
+### Data Layer
+Global data in `src/_data/` is accessible in all templates:
+- `{{ client.name }}` - Client information
+- `{{ global.currentYear }}` - Current year (for footer)
 
+### Adding Pages
+1. Create `.njk` file in `src/`
+2. Add frontmatter:
+   ```yaml
+   ---
+   title: Page Title
+   description: Page description for SEO
+   ---
+   ```
+3. Extend base layout:
+   ```njk
+   {% extends "layouts/base.njk" %}
+   {% block content %}
+     <!-- Page content -->
+   {% endblock %}
+   ```
+
+## Deployment
+
+Deploy to server using the deployment script:
+
+```bash
+./deploy.sh
 ```
-npm run serve
-```
 
-Visit http://localhost:8080 to view your site. Changes to the files in src/ will automatically rebuild and reload the site.
-
-### Available Scripts
-
-npm run build: Build the project for production, generating the static files in the dist/ directory.
-npm run serve: Start a local development server with live reloading.
-npm run watch: Watch for changes and rebuild the CSS and Eleventy templates.
-npm run build:css: Compile the SASS files into CSS using PostCSS and TailwindCSS.
-npm run clean: Remove the dist/ directory to ensure a fresh build (add this script as needed).
-
-### Customization
-
-### TailwindCSS
-
-Modify tailwind.config.js to customize TailwindCSS settings, such as colors, spacing, and fonts.
-Add or update styles in src/assets/sass/styles.scss.
-
-### Nunjucks Templates
-
-Add new layouts in src/\_includes/layouts/.
-Create reusable components in src/\_includes/components/.
-Store global data in src/\_data/.
-
-### Eleventy Plugins
-
-Configure navigation in the eleventyConfig.addPlugin(eleventyNavigationPlugin) block in .eleventy.js.
-Update sitemap settings in the eleventyConfig.addPlugin(sitemap) block in .eleventy.js.
-
-### Deployment
-
-This project is configured for easy deployment to Netlify. You can customize the deployment settings in netlify.toml.
-
-Deploy to Netlify:
-
-Push your repository to a Git provider like GitHub.
-Connect your repository to Netlify.
-Netlify will automatically build and deploy your site on each push.
-Build Locally for Production:
-
-To generate a production-ready build:
-
-```
-npm run build
-The output will be in the dist/ directory, ready to be served.
-```
+This script:
+1. Builds the site (`npm run build`)
+2. Uses rsync to copy `dist/` to the server at `69.164.204.88:/var/www/alexanderkey.com`
