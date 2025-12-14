@@ -1402,11 +1402,6 @@ video {
     line-height: 1.75rem;
   }
 
-  .sm\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
   .sm\:leading-8 {
     line-height: 2rem;
   }
@@ -1510,10 +1505,6 @@ video {
     width: 33.333333%;
   }
 
-  .lg\:w-1\/4 {
-    width: 25%;
-  }
-
   .lg\:max-w-3xl {
     max-width: 48rem;
   }
@@ -1581,6 +1572,11 @@ video {
 
   .lg\:pb-14 {
     padding-bottom: 3.5rem;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .lg\:text-xl {
