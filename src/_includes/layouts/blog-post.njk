@@ -1,0 +1,36 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<article class="bg-white py-16">
+  <div class="mx-auto max-w-3xl px-6 lg:px-8">
+    {# Post header #}
+    <header class="mb-10 border-b border-gray-200 pb-10">
+      <div class="flex items-center gap-x-4 text-sm text-gray-500 mb-4">
+        <time datetime="{{ date | dateIso }}">
+          {{ date | dateReadable }}
+        </time>
+      </div>
+      <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        {{ title }}
+      </h1>
+      {% if description %}
+      <p class="mt-6 text-xl leading-8 text-gray-600">
+        {{ description }}
+      </p>
+      {% endif %}
+    </header>
+
+    {# Post content #}
+    <div class="prose prose-lg prose-indigo max-w-none">
+      {{ content | safe }}
+    </div>
+
+    {# Back link #}
+    <div class="mt-16 pt-8 border-t border-gray-200">
+      <a href="/blog/" class="text-sm font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+        <span aria-hidden="true">&larr;</span> Back to blog
+      </a>
+    </div>
+  </div>
+</article>
+{% endblock %}

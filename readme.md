@@ -110,6 +110,102 @@ Global data in `src/_data/` is accessible in all templates:
    {% endblock %}
    ```
 
+## Blog System
+
+The portfolio includes a blog built with Eleventy collections, supporting Markdown posts with frontmatter metadata.
+
+### Blog Structure
+
+```
+src/
+├── blog/
+│   ├── index.njk              # Blog listing page
+│   └── posts/
+│       └── *.md               # Individual blog posts (Markdown)
+├── _includes/
+│   ├── layouts/
+│   │   └── blog-post.njk      # Blog post layout
+│   └── components/
+│       └── blog/
+│           └── post-card.njk  # Blog post preview card
+```
+
+### How It Works
+
+1. **Blog Collection**: Eleventy automatically creates a "blog" collection from all Markdown files tagged with `tags: ["blog"]`
+2. **Sorting**: Posts are automatically sorted by date (newest first)
+3. **Date Filters**: Custom filters (`dateIso` and `dateReadable`) format post dates
+4. **Typography**: Uses `@tailwindcss/typography` plugin for automatic Markdown styling
+5. **URLs**:
+   - Blog listing: `/blog/`
+   - Individual posts: `/blog/post-slug/` (slug generated from title)
+
+### Writing a New Blog Post
+
+1. **Create a new Markdown file** in `src/blog/posts/`:
+   ```bash
+   touch src/blog/posts/my-new-post.md
+   ```
+
+2. **Add frontmatter** at the top of the file:
+   ```markdown
+   ---
+   title: "Your Post Title"
+   description: "A short description for SEO and the listing page (150-160 chars)"
+   date: 2025-12-14
+   tags: ["blog"]
+   layout: layouts/blog-post.njk
+   permalink: "/blog/{{ title | slugify }}/"
+   ---
+   ```
+
+3. **Write your content** in Markdown below the frontmatter:
+   ```markdown
+   ## Introduction
+
+   Your blog post content here...
+
+   - Lists work
+   - Multiple items supported
+
+   **Bold** and *italic* text supported.
+
+   \`\`\`javascript
+   // Code blocks work too
+   console.log("Hello world");
+   \`\`\`
+   ```
+
+4. **Build and preview**:
+   ```bash
+   npm run watch
+   # Visit http://localhost:8080/blog/
+   ```
+
+### Blog Post Frontmatter Fields
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `title` | Yes | Post title displayed on listing and post page |
+| `description` | Yes | Short excerpt for SEO and blog listing preview |
+| `date` | Yes | Publication date (YYYY-MM-DD format) - used for sorting |
+| `tags` | Yes | Must include `["blog"]` to add post to collection |
+| `layout` | Yes | Should be `layouts/blog-post.njk` |
+| `permalink` | Yes | URL structure - use `"/blog/{{ title | slugify }}/"` for clean URLs |
+
+### Blog Styling
+
+- **Listing Page**: Vertical list layout with post cards showing date, title, description, and author info
+- **Post Page**: Centered column (max-width) with Typography plugin styling for Markdown content
+- **Author Info**: Displays your photo (`alex_profile.jpg`), name (from `client.name`), and "Rails Developer" title
+
+### Blog Navigation
+
+The blog is accessible via:
+- Header navigation link (desktop and mobile)
+- Direct URL: `/blog/`
+- Individual posts: `/blog/post-title-slug/`
+
 ## Deployment
 
 Deploy to server using the deployment script:
