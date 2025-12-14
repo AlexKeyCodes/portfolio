@@ -1130,6 +1130,9 @@ video {
   white-space: nowrap;
   border-width: 0;
 }
+.static {
+  position: static;
+}
 .fixed {
   position: fixed;
 }
@@ -1303,10 +1306,6 @@ video {
 .aspect-\[1313\/771\] {
   aspect-ratio: 1313/771;
 }
-.size-10 {
-  width: 2.5rem;
-  height: 2.5rem;
-}
 .size-12 {
   width: 3rem;
   height: 3rem;
@@ -1314,6 +1313,10 @@ video {
 .size-6 {
   width: 1.5rem;
   height: 1.5rem;
+}
+.size-10 {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 .h-10 {
   height: 2.5rem;
@@ -1907,6 +1910,10 @@ video {
 }
 .focus-visible\:outline-indigo-600:focus-visible {
   outline-color: #4f46e5;
+}
+.group:hover .group-hover\:text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity, 1));
 }
 .dark\:bg-gray-900:is(.dark *) {
   --tw-bg-opacity: 1;
