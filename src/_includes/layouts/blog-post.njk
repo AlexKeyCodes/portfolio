@@ -1,36 +1,187 @@
-{% extends "layouts/base.njk" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Standard meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-{% block content %}
-<article class="bg-white py-16">
-  <div class="mx-auto max-w-3xl px-6 lg:px-8">
-    {# Post header #}
-    <header class="mb-10 border-b border-gray-200 pb-10">
-      <div class="flex items-center gap-x-4 text-sm text-gray-500 mb-4">
-        <time datetime="{{ date | dateIso }}">
-          {{ date | dateReadable }}
-        </time>
-      </div>
-      <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-        {{ title }}
-      </h1>
-      {% if description %}
-      <p class="mt-6 text-xl leading-8 text-gray-600">
-        {{ description }}
-      </p>
-      {% endif %}
-    </header>
+    <!-- Primary SEO -->
+    <title>{{ title }} | {{ client.name }}</title>
+    <meta name="description" content="{{ description }}" />
+    <link rel="canonical" href="{{ client.domain }}{{ page.url }}" />
 
-    {# Post content #}
-    <div class="prose prose-lg prose-indigo max-w-none">
-      {{ content | safe }}
-    </div>
+    <!-- Open Graph (article-specific) -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:image" content="{{ client.domain }}{{ image if image else '/assets/images/og-image.webp' }}" />
+    <meta property="og:url" content="{{ client.domain }}{{ page.url }}" />
+    <meta property="article:published_time" content="{{ date | dateIso }}" />
+    <meta property="article:modified_time" content="{{ (updated if updated else date) | dateIso }}" />
+    <meta property="article:author" content="{{ client.domain }}{{ author.url if author and author.url else '/about/' }}" />
 
-    {# Back link #}
-    <div class="mt-16 pt-8 border-t border-gray-200">
-      <a href="/blog/" class="text-sm font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
-        <span aria-hidden="true">&larr;</span> Back to blog
-      </a>
-    </div>
-  </div>
-</article>
-{% endblock %}
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ title }}" />
+    <meta name="twitter:description" content="{{ description }}" />
+    <meta name="twitter:image" content="{{ client.domain }}{{ image if image else '/assets/images/og-image.webp' }}" />
+
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      type="image/x-icon"
+      href="/assets/favicons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/favicons/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/favicons/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link href="/assets/favicons/site.webmanifest" rel="manifest" />
+
+    <!-- Sitewide Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+    <!-- Google Font -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+
+    <!-- Article JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "{{ title }}",
+        "description": "{{ description }}",
+        "image": "{{ client.domain }}{{ image if image else '/assets/images/og-image.webp' }}",
+        "datePublished": "{{ date | dateIso }}",
+        "dateModified": "{{ (updated if updated else date) | dateIso }}",
+        "author": {
+          "@type": "Person",
+          "name": "{{ author.name if author and author.name else client.name }}",
+          "url": "{{ client.domain }}{{ author.url if author and author.url else '/about/' }}"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "{{ client.name }}",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "{{ client.domain }}/assets/images/logo.png"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "{{ client.domain }}{{ page.url }}"
+        }
+      }
+    </script>
+
+    <!-- BreadcrumbList JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "{{ client.domain }}/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "{{ client.domain }}/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "{{ title }}",
+            "item": "{{ client.domain }}{{ page.url }}"
+          }
+        ]
+      }
+    </script>
+
+  </head>
+
+  <body>
+    {% include "components/header.njk" %}
+    <main>
+      <article class="bg-white py-16">
+        <div class="mx-auto max-w-3xl px-6 lg:px-8">
+          {# Post header with E-E-A-T metadata #}
+          <header class="mb-10 border-b border-gray-200 pb-10">
+            {# Author and date information #}
+            <div class="flex items-center gap-x-4 mb-6">
+              {% if author and author.image %}
+              <img
+                src="{{ author.image }}"
+                alt="{{ author.name if author and author.name else client.name }}"
+                class="h-12 w-12 rounded-full object-cover"
+              />
+              {% endif %}
+              <div class="text-sm">
+                <p class="font-semibold text-gray-900">
+                  <a
+                    href="{{ author.url if author and author.url else '/about/' }}"
+                    class="hover:text-indigo-600"
+                  >
+                    {{ author.name if author and author.name else client.name }}
+                  </a>
+                </p>
+                <div class="flex items-center gap-x-2 text-gray-500">
+                  <time datetime="{{ date | dateIso }}">
+                    {{ date | dateReadable }}
+                  </time>
+                  {% if updated and (updated | dateIso) != (date | dateIso) %}
+                  <span>&middot;</span>
+                  <span>Updated <time datetime="{{ updated | dateIso }}">{{ updated | dateReadable }}</time></span>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+
+            <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              {{ title }}
+            </h1>
+            {% if description %}
+            <p class="mt-6 text-xl leading-8 text-gray-600">
+              {{ description }}
+            </p>
+            {% endif %}
+          </header>
+
+          {# Post content #}
+          <div class="prose prose-lg prose-indigo max-w-none">
+            {{ content | safe }}
+          </div>
+
+          {# Back link #}
+          <div class="mt-16 pt-8 border-t border-gray-200">
+            <a href="/blog/" class="text-sm font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+              <span aria-hidden="true">&larr;</span> Back to blog
+            </a>
+          </div>
+        </div>
+      </article>
+    </main>
+    {% include "components/footer.njk" %}
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/modal.js"></script>
+    <script src="/assets/js/code-copy.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9a79e18a177f48f29e1c8fda4f3bd2db"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>
