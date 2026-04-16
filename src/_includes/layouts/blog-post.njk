@@ -122,8 +122,12 @@
     <main>
       <article class="bg-white py-16">
         <div class="mx-auto max-w-3xl px-6 lg:px-8">
+          <a href="/blog/" class="text-sm font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+              <span aria-hidden="true">&larr;</span> Back to blog
+            </a>
+
           {# Post header with E-E-A-T metadata #}
-          <header class="mb-10 border-b border-gray-200 pb-10">
+          <header class="mb-10 border-b border-gray-200 pb-10 mt-6">
             {# Author and date information #}
             <div class="flex items-center gap-x-4 mb-6">
               {% if author and author.image %}

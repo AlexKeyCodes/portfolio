@@ -7,7 +7,7 @@ layout: layouts/blog-post.njk
 permalink: "/blog/{{ title | slugify }}/"
 ---
 
-I use Dokku for hosting all of my Rails apps these days. It's easy to deploy, makes managing production and staging environments straightforward, and lets you host multiple Rails apps on a single server. Below are the instructions I've refined over the years for setting up a new server with Dokku and deploying a Rails app.
+I use Dokku for hosting all of my Rails apps these days. It's easy to deploy, makes managing production and staging environments straightforward, and lets you host multiple Rails apps on a single server. Below are the instructions I've refined over the years for setting up a new server with Dokku and deploying a Rails app. Before following this guide, I'd recommend [hardening your server](/blog/how-to-harden-a-new-server/) first.
 
 This guide covers installing Dokku, setting up databases, creating your Dokku app, configuring a domain name with SSL, and adding additional apps to the same server.
 
@@ -49,7 +49,7 @@ echo "your-ssh-public-key-here" | sudo dokku ssh-keys:add admin
 
 ### Step 3: Set Global Domain
 
-Configure a global domain for automatic subdomain routing:
+Please note that this step is not required. Your actual domain name will be setup later. Configure a global domain for automatic subdomain routing:
 
 ```bash
 # Replace YOUR_SERVER_IP with your actual IP
@@ -81,6 +81,8 @@ dokku apps:list
 ```
 
 ### Step 5: Install MySQL Plugin
+
+I use both mysql and postgres for my rails app. If using postgres, just install its dokku plugin.
 
 ```bash
 sudo dokku plugin:install https://github.com/dokku/dokku-mysql.git mysql
