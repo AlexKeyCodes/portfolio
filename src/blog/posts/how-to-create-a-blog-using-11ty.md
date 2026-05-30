@@ -10,7 +10,7 @@ permalink: "/blog/{{ title | slugify }}/"
 {% raw %}
 Originally I planned to build this portfolio / blog using rails. I mean I'm a rails developer after all. In fact I originally did build it on rails. I scaffolded the blog system, used devise for admin users, I even started building out the infrastructure to manage the work for my clients. Then one day I was building a static site for a client, and was using 11ty. I started wondering why I'm spending so much time building out a rails platform when 11ty can do everything I need. Do I really need to build out project management when I already use Notion? Do I really need a contact form when all I get out of it is spam? Then answer is a resounding NO! So I decided to keep things simple. A homepage and a blog.
 
-This guide walks through building a complete 11ty blog from a fresh `npm init`: collections, custom filters, layouts, a listing page, SEO-friendly permalinks, Open Graph and Twitter Card meta tags, JSON-LD structured data, and a sitemap. Styling is intentionally left out — the goal here is the content pipeline, not the CSS. If you want to see the finished version, the source for this entire site lives at [github.com/AlexKeyCodes/portfolio](https://github.com/AlexKeyCodes/portfolio).
+This guide walks through building a complete 11ty blog from a fresh `npm init`: collections, custom filters, layouts, a listing page, SEO-friendly permalinks, Open Graph and Twitter Card meta tags, JSON-LD structured data, and a sitemap. Styling is intentionally left out — the goal here is the content pipeline, not the CSS. If you'd rather start from a working scaffold, I've packaged this exact setup into a GitHub template at [github.com/AlexKeyCodes/11ty-template](https://github.com/AlexKeyCodes/11ty-template) — hit **"Use this template"** to spin up your own repo and build from there.
 
 ## What is 11ty?
 
@@ -589,5 +589,5 @@ Before you ship, make sure you've got:
 - Sitemap plugin registered and `sitemap.xml` generated
 - Global data in `src/_data/client.js`
 
-That's the whole setup. The blog you're reading right now uses this exact stack, and the full working version is at [github.com/AlexKeyCodes/portfolio](https://github.com/AlexKeyCodes/portfolio) — clone it if you want a head start.
+That's the whole setup. The blog you're reading right now uses this exact stack, and I've packaged it into a GitHub template at [github.com/AlexKeyCodes/11ty-template](https://github.com/AlexKeyCodes/11ty-template) — hit **"Use this template"** if you want a head start.
 {% endraw %}
