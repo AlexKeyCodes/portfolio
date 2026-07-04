@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="{{ description }}" />
-    <meta name="keywords" content="" />
     <link rel="canonical" href="{{ client.domain }}{{ page.url }}" />
 
     <!-- Social Media Display -->
@@ -14,10 +13,13 @@
     <meta property="og:description" content="{{ description }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ client.domain }}{{ page.url }}" />
-    <meta property="og:image" content="/assets/images/og-image.webp" />
+    <meta
+      property="og:image"
+      content="{{ client.domain }}/assets/images/og-image.webp"
+    />
     <meta
       property="og:image:secure_url"
-      content="/assets/images/og-image.webp"
+      content="{{ client.domain }}/assets/images/og-image.webp"
     />
 
     <!-- Favicons -->
@@ -57,15 +59,12 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "Person",
         "name": "{{ client.name }}",
         "url": "{{ client.domain }}",
-        "logo": "{{ client.domain }}/assets/images/logo.png",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "{{ client.phone }}",
-          "contactType": "Customer Service"
-        }
+        "image": "{{ client.domain }}/assets/images/alex_profile.jpg",
+        "jobTitle": "Full-Stack Developer",
+        "sameAs": ["https://github.com/AlexKeyCodes"]
       }
     </script>
 

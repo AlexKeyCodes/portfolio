@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a personal portfolio website built with 11ty (Eleventy), using Nunjucks templating, TailwindCSS with SASS preprocessing, and deployed to Netlify. The site is hosted at https://www.alexanderkey.com.
+This is a personal portfolio and tech blog built with 11ty (Eleventy), using Nunjucks templating, TailwindCSS with SASS preprocessing, and deployed to a self-hosted server via rsync (`deploy.sh`). The site is hosted at https://www.alexanderkey.com.
 
 ## Development Commands
 
@@ -124,7 +124,6 @@ dist/                       # Build output (auto-generated, not in git)
 
 ## Deployment
 
-The site is configured for Netlify deployment:
-- **Build Command**: `npm run build` (specified in `netlify.toml`)
-- **Publish Directory**: `dist/`
-- **SPA Fallback**: Redirects all routes to `/index.html` for client-side routing
+The site is deployed to a self-hosted server via `deploy.sh`:
+- Runs `npm run build`, then rsyncs `dist/` to the server at `/var/www/alexanderkey.com/_site`
+- Deploy with: `./deploy.sh`
