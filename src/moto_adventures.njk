@@ -1,0 +1,30 @@
+---
+title: "Moto Adventures - Alexander Key"
+description: "Years of single track, desert, and mountain riding on my dirtbike — a photo gallery shared as part of my Havasu Moto tour guide application."
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<div class="bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <h1 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Moto Adventures</h1>
+      <p class="mt-2 text-lg/8 text-gray-600">I've spent years on my dirtbike chasing single track — desert, mountains, and everything in between. Riding is at its best when it's shared, and these shots are from the trips and trails that prove it. Put together for the crew at <a href="https://www.havasumoto.com" class="font-medium text-indigo-600 hover:text-indigo-500">Havasu Moto</a>.</p>
+    </div>
+    <div class="mt-10 columns-1 gap-4 sm:mt-16 sm:columns-2 lg:columns-3">
+      {% for image in motoGallery %}
+        <img
+          class="mb-4 w-full break-inside-avoid rounded-lg"
+          src="{{ image.src }}"
+          width="{{ image.width }}"
+          height="{{ image.height }}"
+          alt="Motorcycle adventure photo {{ loop.index }}"
+          {% if loop.index > 4 %}loading="lazy"{% endif %}
+          decoding="async"
+        />
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}
