@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a personal portfolio and tech blog built with 11ty (Eleventy), using Nunjucks templating, TailwindCSS with SASS preprocessing, and deployed to a self-hosted server via rsync (`deploy.sh`). The site is hosted at https://www.alexanderkey.com.
+This is a personal portfolio and tech blog built with 11ty (Eleventy), using Nunjucks templating, TailwindCSS with SASS preprocessing, and deployed to Cloudflare Workers static assets via Wrangler (`deploy.sh`). The site is hosted at https://alexanderkey.com.
 
 ## Development Commands
 
@@ -124,6 +124,7 @@ dist/                       # Build output (auto-generated, not in git)
 
 ## Deployment
 
-The site is deployed to a self-hosted server via `deploy.sh`:
-- Runs `npm run build`, then rsyncs `dist/` to the server at `/var/www/alexanderkey.com/_site`
+The site is deployed to Cloudflare Workers (static assets) via `deploy.sh`:
+- Runs `npm run build`, then `npx wrangler deploy` — uploads `dist/` as static assets for the `alexanderkey` Worker (config in `wrangler.jsonc`), which serves https://alexanderkey.com via a custom domain
 - Deploy with: `./deploy.sh`
+- Requires a one-time `npx wrangler login` on new machines
