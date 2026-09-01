@@ -1,0 +1,102 @@
+---
+title: "Resume - Alexander Key"
+description: "Resume of Alexander Key — full-stack Ruby on Rails developer with 10+ years building and running production web and mobile apps."
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block head %}
+<style>
+  @media print {
+    @page { margin: 0.45in 0.55in; }
+    header, footer, .no-print { display: none !important; }
+    .resume-band { padding: 0 !important; }
+    #resume { padding: 0 !important; max-width: none !important; }
+    #resume h1 { font-size: 22px !important; }
+    #resume h2 { font-size: 13px !important; padding-bottom: 2px !important; }
+    #resume .summary { margin-top: 8px !important; }
+    #resume .experience-title { margin-top: 14px !important; }
+    #resume .umbrella { margin-top: 8px !important; }
+    #resume .edu-skills { margin-top: 14px !important; }
+    #resume h3, #resume p, #resume li, #resume dt, #resume dd { font-size: 10.5px !important; line-height: 1.4 !important; }
+    #resume .engagement { break-inside: avoid; margin-top: 8px !important; }
+    #resume ul { margin-top: 3px !important; }
+    #resume li { margin-top: 2px !important; }
+    a { text-decoration: none; color: inherit; }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="resume-band bg-white py-16 sm:py-24">
+  <div id="resume" class="mx-auto max-w-4xl px-6 lg:px-8">
+
+    <div class="flex flex-wrap items-start justify-between gap-4">
+      <div>
+        <h1 class="text-4xl font-bold tracking-tight text-gray-900">{{ resume.name }}</h1>
+        <p class="mt-1 text-sm text-gray-600">
+          <a class="hover:text-indigo-600" href="mailto:{{ resume.contact.email }}">{{ resume.contact.email }}</a>
+          &nbsp;|&nbsp; {{ resume.contact.phone }}
+          &nbsp;|&nbsp; <a class="hover:text-indigo-600" href="https://www.{{ resume.contact.website }}">{{ resume.contact.website }}</a>
+          &nbsp;|&nbsp; {{ resume.contact.location }}
+        </p>
+      </div>
+      <a
+        href="/assets/alexander-key-resume.pdf"
+        class="no-print rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
+        download
+        >Download PDF</a
+      >
+    </div>
+
+    <p class="summary mt-5 text-sm leading-6 text-gray-700">{{ resume.summary }}</p>
+
+    <h2 class="experience-title mt-10 border-b-2 border-gray-900 pb-1 text-xl font-bold tracking-tight text-gray-900">Experience</h2>
+
+    <div class="umbrella mt-4 flex flex-wrap items-baseline justify-between gap-x-4">
+      <h3 class="text-base font-semibold text-gray-900">
+        {{ resume.umbrella.title }}
+        <span class="font-normal text-gray-500">· {{ resume.umbrella.type }}</span>
+      </h3>
+      <p class="text-sm font-medium text-gray-700">{{ resume.umbrella.dates }}</p>
+    </div>
+
+    {% for job in resume.engagements %}
+      <div class="engagement mt-6">
+        <div class="flex flex-wrap items-baseline justify-between gap-x-4">
+          <h3 class="text-sm font-semibold text-gray-900">
+            {{ job.company }}
+            <span class="font-normal text-gray-500">— {{ job.role }}</span>
+          </h3>
+          <p class="text-sm text-gray-600">{{ job.dates }}</p>
+        </div>
+        <ul class="mt-2 list-disc space-y-1.5 pl-5 text-sm leading-6 text-gray-700">
+          {% for bullet in job.bullets %}
+            <li>{{ bullet | safe }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+
+    <div class="edu-skills mt-10 grid gap-x-12 gap-y-8 sm:grid-cols-2">
+      <div>
+        <h2 class="border-b-2 border-gray-900 pb-1 text-xl font-bold tracking-tight text-gray-900">Education</h2>
+        <p class="mt-3 text-sm font-semibold text-gray-900">{{ resume.education.degree }}</p>
+        <p class="text-sm text-gray-600">{{ resume.education.school }} — {{ resume.education.location }}</p>
+      </div>
+      <div>
+        <h2 class="border-b-2 border-gray-900 pb-1 text-xl font-bold tracking-tight text-gray-900">Skills</h2>
+        <dl class="mt-3 space-y-1.5">
+          {% for skill in resume.skills %}
+            <div class="text-sm leading-6">
+              <dt class="inline font-semibold text-gray-900">{{ skill.group }}:</dt>
+              <dd class="ml-1 inline text-gray-700">{{ skill.items }}</dd>
+            </div>
+          {% endfor %}
+        </dl>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

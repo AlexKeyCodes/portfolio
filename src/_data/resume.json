@@ -1,0 +1,71 @@
+{
+  "name": "Alexander Key",
+  "label": "Full-Stack Developer",
+  "contact": {
+    "email": "alex@alexanderkey.com",
+    "phone": "(817) 614-3338",
+    "website": "alexanderkey.com",
+    "location": "Austin, TX"
+  },
+  "summary": "Full-stack developer with 10+ years building and running production Ruby on Rails applications end to end — architecture, payments, mobile apps with Hotwire Native, and the Linux servers they run on.",
+  "umbrella": {
+    "title": "Lead Full-Stack Developer",
+    "type": "Freelance / Contract",
+    "dates": "2016 – Present"
+  },
+  "engagements": [
+    {
+      "company": "88 Restaurants",
+      "role": "Lead Developer",
+      "dates": "2020 – Present",
+      "bullets": [
+        "Built and scaled a restaurant management platform to <strong>100+ restaurants</strong> and <strong>$250K+ in annual revenue</strong> by leading a small team of developers from architecture through launch — owning the full stack from Rails application code to production servers and CI/deployment.",
+        "Processed <strong>8 figures in payment volume</strong> by architecting the online ordering system end to end — Stripe checkout and refunds, Uber delivery integration, order scheduling, and a full catering system.",
+        "Delivered the platform's most complex feature — live table management — by building real-time table-state synchronization across every device in the restaurant using ActionCable WebSockets, giving front-of-house staff a single live view of the floor."
+      ]
+    },
+    {
+      "company": "Reservation Genie",
+      "role": "Lead Developer",
+      "dates": "2016 – Present",
+      "bullets": [
+        "Grew from front-end developer building static sites to lead developer running a small team over a <strong>9-year engagement</strong> by progressively taking ownership of the platform's back end, infrastructure, and technical roadmap.",
+        "Modernized a legacy Rails 3 reservation platform by leading a ground-up rewrite to <strong>Rails 8</strong> in 2025 — architecting the new application and building its production infrastructure from scratch, including Dokku server provisioning and a full CI/CD pipeline.",
+        "Expanded the platform into a new vertical — tour and boat charter operators — by designing and building an end-to-end private charter product: embeddable lead-capture widget, prioritized booking pipeline, quote/deposit/balance invoicing, digital waivers, and crew assignment with automated itineraries.",
+        "Enabled clients to track <strong>Google and Meta ad conversions across the entire booking funnel</strong> by white-labeling reservations onto client-owned subdomains — building the multi-tenant routing and per-client DNS/SSL provisioning behind it."
+      ]
+    },
+    {
+      "company": "Tally Meals",
+      "role": "Lead Developer",
+      "dates": "2025 – Present",
+      "bullets": [
+        "Replaced a barely-functioning legacy .NET platform for Greek house meal management by leading a small team through a ground-up Ruby on Rails rebuild — owning architecture, servers, and CI/CD from first commit to launch, now serving chapters across <strong>multiple universities</strong>.",
+        "Shipped <strong>iOS and Android apps from a single Rails codebase</strong> using Hotwire Native — members reserve meals and late plates against chef-published menus, with per-member allergy/dietary tracking, meal-plan limits and billing compliance, and printable kitchen prep lists.",
+        "Carried every client's historical data through the replatform by converting the legacy <strong>MSSQL database to PostgreSQL</strong> — reverse-engineering the old schema and migrating chapters, members, meal plans, and reservation history into the new domain model."
+      ]
+    },
+    {
+      "company": "Austin City Guide",
+      "role": "Full-Stack Developer",
+      "dates": "2020 – Present",
+      "bullets": [
+        "Modernized a city guide platform running on a <strong>~17-year-old .NET codebase</strong> by rebuilding it from the ground up in Ruby on Rails as sole developer — maintaining and evolving it since.",
+        "Achieved <strong>rank #1 Google results for multiple competitive local keywords</strong> by pairing the rebuild with aggressive on-page SEO — content structure, technical optimization, and performance work.",
+        "Increased click-through rates on the site's highest-traffic pages by building in-house analytics and an A/B split-testing framework — measuring real user behavior, then iterating page layouts against live traffic."
+      ]
+    }
+  ],
+  "education": {
+    "degree": "Bachelor of Science, Computer Science",
+    "school": "Texas State University",
+    "location": "San Marcos, TX"
+  },
+  "skills": [
+    { "group": "Languages & Frameworks", "items": "Ruby, Ruby on Rails, JavaScript, Hotwire (Turbo & Stimulus), Hotwire Native" },
+    { "group": "Front End", "items": "TailwindCSS, SASS/CSS, HTML" },
+    { "group": "Databases", "items": "PostgreSQL, MySQL, MSSQL" },
+    { "group": "Infrastructure", "items": "Linux, Dokku, Nginx, CI/CD" },
+    { "group": "Services & APIs", "items": "Stripe, Twilio, Postmark, Telnyx, Uber Direct" }
+  ]
+}
