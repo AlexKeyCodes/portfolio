@@ -33,27 +33,23 @@
                 {% set phoneAlt = shot.alt %}
                 {% include "components/phone-frame.njk" %}
               {% elif shot.plain %}
-                <a href="/projects/{{ project.slug }}/">
-                  <img
-                    class="mx-auto w-full max-w-lg lg:max-w-none"
-                    src="{{ shot.src }}"
-                    width="{{ shot.width }}"
-                    height="{{ shot.height }}"
-                    alt="{{ shot.alt }}"
-                    {% if not loop.first %}loading="lazy"{% endif %}
-                  />
-                </a>
+                <img
+                  class="mx-auto w-full max-w-lg lg:max-w-none"
+                  src="{{ shot.src }}"
+                  width="{{ shot.width }}"
+                  height="{{ shot.height }}"
+                  alt="{{ shot.alt }}"
+                  {% if not loop.first %}loading="lazy"{% endif %}
+                />
               {% else %}
-                <a href="/projects/{{ project.slug }}/">
-                  <img
-                    class="w-full rounded-lg shadow-xl ring-1 ring-gray-400/10"
-                    src="{{ shot.src }}"
-                    width="{{ shot.width }}"
-                    height="{{ shot.height }}"
-                    alt="{{ shot.alt }}"
-                    {% if not loop.first %}loading="lazy"{% endif %}
-                  />
-                </a>
+                <img
+                  class="w-full rounded-lg shadow-xl ring-1 ring-gray-400/10"
+                  src="{{ shot.src }}"
+                  width="{{ shot.width }}"
+                  height="{{ shot.height }}"
+                  alt="{{ shot.alt }}"
+                  {% if not loop.first %}loading="lazy"{% endif %}
+                />
               {% endif %}
             </div>
             <div
@@ -65,19 +61,12 @@
               <h2
                 class="mb-4 text-3xl tracking-tight font-extrabold text-gray-900"
               >
-                <a href="/projects/{{ project.slug }}/" class="hover:text-indigo-600">{{ project.name }}</a>
+                {{ project.name }}
               </h2>
               {% for paragraph in project.summary %}
                 <p class="mb-8 font-light lg:text-xl">{{ paragraph }}</p>
               {% endfor %}
               <div class="flex flex-wrap items-center gap-x-6 gap-y-3">
-                <a
-                  href="/projects/{{ project.slug }}/"
-                  class="inline-flex items-center gap-1 font-semibold text-indigo-600 hover:text-indigo-500"
-                >
-                  View project
-                  <span aria-hidden="true">&rarr;</span>
-                </a>
                 <a
                   href="{{ project.siteUrl }}"
                   target="_blank"
