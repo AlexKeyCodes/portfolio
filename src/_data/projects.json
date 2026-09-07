@@ -1,0 +1,172 @@
+[
+  {
+    "slug": "reservation-genie",
+    "name": "Reservation Genie",
+    "metaDescription": "Reservation Genie: a Rails 3 to Rails 8 rewrite of a reservation and ticketing platform for restaurants, tours, and charters, built and led by Alexander Key.",
+    "url": "https://reservationgenie.com",
+    "urlLabel": "reservationgenie.com",
+    "role": "Lead Developer",
+    "dates": "2023 – Present",
+    "intro": "Reservation Genie is a reservation management and ticket sales platform for restaurants, tour operators, and charter companies. It started as a Rails 3 app; I led a small team through a ground-up rewrite to Rails 8 and built its production infrastructure from scratch.",
+    "summary": [
+      "Reservation Genie is a reservation management and ticket sales platform for restaurants and tour operators, processing over seven figures in revenue. It started life as a Rails 3 application; I led a small team through a ground-up rewrite to Rails 8 and built its production infrastructure from scratch.",
+      "Beyond the rewrite, I expanded the platform into a new vertical with an end-to-end private charter product and white-labeled reservations onto client-owned domains so clients can track ad conversions across the whole booking funnel."
+    ],
+    "highlights": [
+      {
+        "title": "Rails 3 to Rails 8 rewrite",
+        "body": [
+          "Architected the new application and led a small team through the rewrite, replacing the legacy codebase without interrupting live bookings. Provisioned the servers with Dokku and set up a GitHub Actions pipeline for CI/CD."
+        ]
+      },
+      {
+        "title": "Private charter product",
+        "body": [
+          "Designed and built an end-to-end product for tour and boat charter operators: an embeddable lead-capture widget, a prioritized booking pipeline, quote, deposit, and balance invoicing with Stripe, digital waivers, and crew assignment with automated itineraries."
+        ]
+      },
+      {
+        "title": "White-labeled booking on client domains",
+        "body": [
+          "Built multi-tenant routing and automated per-client DNS and SSL provisioning so reservations live on client-owned subdomains. Clients can now track Google and Meta ad conversions across the entire booking funnel."
+        ]
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/assets/images/reservation_genie.png",
+        "width": 1655,
+        "height": 1461,
+        "alt": "Reservation Genie public tour checkout showing ticket quantity, promo code, gift card, and order total"
+      }
+    ]
+  },
+  {
+    "slug": "tally-meals",
+    "name": "Tally Meals",
+    "metaDescription": "Tally Meals: a ground-up Ruby on Rails rebuild of a Greek house meal management platform with Hotwire Native iOS and Android apps, built and led by Alexander Key.",
+    "url": "https://tallymeals.com",
+    "urlLabel": "tallymeals.com",
+    "role": "Lead Developer",
+    "dates": "2022 – 2023",
+    "intro": "Tally Meals is a meal reservation platform for college sororities and fraternities. It replaced a failing legacy .NET platform with a ground-up Rails rebuild, and ships iOS and Android apps from the same codebase using Hotwire Native.",
+    "summary": [
+      "Tally Meals is a meal reservation platform for college sororities and fraternities that streamlines communal dining. It replaced a failing legacy .NET platform with a ground-up Rails rebuild, and ships iOS and Android apps from the same codebase using Hotwire Native.",
+      "Chefs build and publish menus, members reserve meals and late plates from their phones, and the kitchen gets exact headcounts so it can prepare the right amount of food and cut waste."
+    ],
+    "highlights": [
+      {
+        "title": "iOS and Android from a single Rails codebase",
+        "body": [
+          "Shipped native mobile apps with Hotwire Native, so members can reserve meals and late plates against chef-published menus on their phones without a separate mobile codebase to maintain."
+        ]
+      },
+      {
+        "title": "Chef-published menus and kitchen prep lists",
+        "body": [
+          "Menus can be scheduled daily, weekly, monthly, or for a whole semester. Every meal produces a printable prep list with exact headcounts, late plates, and dietary notes for the kitchen."
+        ]
+      },
+      {
+        "title": "Legacy MSSQL to PostgreSQL migration",
+        "body": [
+          "Carried every client's historical data through the replatform by reverse-engineering the old schema and migrating chapters, members, meal plans, and reservation history into the new Rails domain model."
+        ]
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/assets/images/tally_meals_screenshot.png",
+        "width": 3762,
+        "height": 4585,
+        "alt": "Tally Meals mobile app weekly view shown on two phones in light and dark mode",
+        "plain": true
+      }
+    ]
+  },
+  {
+    "slug": "88-restaurants",
+    "name": "88 Restaurants",
+    "metaDescription": "88 Restaurants: a Rails restaurant management platform serving 100+ restaurants with live table management, online ordering, and reservations, built and led by Alexander Key.",
+    "url": "https://88restaurants.com",
+    "urlLabel": "88restaurants.com",
+    "role": "Senior Developer",
+    "dates": "2017 – 2022",
+    "intro": "88 Restaurants is an all-in-one restaurant management platform used by 100+ restaurants: live table management, online ordering, and reservations. I led a small team from architecture through launch and owned the full stack for five years.",
+    "summary": [
+      "88 Restaurants is an all-in-one restaurant management platform used by 100+ restaurants and processing eight figures in payment volume. I led a small team from architecture through launch, owning the full stack from application code and PostgreSQL schema design to production servers and deployment.",
+      "The platform handles three core functions: table management, online ordering, and reservations. The most complex is live table management, which lets restaurants draw their actual floor plans and manage seating in real time across every device on the floor."
+    ],
+    "highlights": [
+      {
+        "title": "Live table management",
+        "body": [
+          "Restaurants draw their real floor plan in a Fabric.js editor and seat guests against it. Table state is synchronized in real time across every device in the restaurant over ActionCable WebSockets, giving front-of-house staff a single live view of the floor."
+        ]
+      },
+      {
+        "title": "Online ordering end to end",
+        "body": [
+          "Architected the online ordering system from checkout to fulfillment: Stripe checkout and refunds, an Uber Direct delivery integration, order scheduling, and a full catering system. The system has processed eight figures in payment volume."
+        ]
+      },
+      {
+        "title": "Reservations and table sheets",
+        "body": [
+          "A day-by-day reservation list with statuses, paid reservations for prix fixe events, and a table sheet inventory view that lays reservations out against each table's timeline."
+        ]
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/assets/images/table_mgmt.png",
+        "width": 2370,
+        "height": 1331,
+        "alt": "88 Restaurants live table management floor plan with the day's reservations and waitlist"
+      }
+    ]
+  },
+  {
+    "slug": "austin-city-guide",
+    "name": "Austin City Guide",
+    "metaDescription": "Austin City Guide: a decade-old .NET city guide rebuilt in Ruby on Rails by Alexander Key, now ranking #1 for competitive Austin keywords with 100,000+ monthly visitors.",
+    "url": "https://austincityguide.com",
+    "urlLabel": "austincityguide.com",
+    "role": "Full-Stack Developer",
+    "dates": "2016 – 2017",
+    "intro": "Austin City Guide is a city guide CMS that I rebuilt from a decade-old .NET codebase in Ruby on Rails as sole developer. It ranks #1 on Google for competitive local keywords and attracts 100,000+ unique visitors a month.",
+    "summary": [
+      "Austin City Guide is a content management system that achieved #1 Google rankings for multiple high-competition keywords such as \"things to do in Austin\" and now attracts 100,000+ unique visitors monthly. I rebuilt it from a decade-old .NET codebase in Ruby on Rails as sole developer.",
+      "The platform manages local business listings, an event calendar, and a long-tail blog strategy, and earns revenue through a pay-per-click model backed by in-house analytics and A/B testing."
+    ],
+    "highlights": [
+      {
+        "title": "#1 Google rankings",
+        "body": [
+          "Ranked first for multiple competitive local keywords, including \"things to do in Austin\", by combining the Rails rebuild with on-page SEO, technical optimization, and page-speed work. The site now attracts 100,000+ unique visitors a month."
+        ]
+      },
+      {
+        "title": "Pay-per-click revenue",
+        "body": [
+          "Featured businesses pay negotiated fees each time a visitor clicks through to their booking page, with every click-through tracked and reported."
+        ]
+      },
+      {
+        "title": "In-house analytics and A/B testing",
+        "body": [
+          "Ahoy-based analytics track page traffic, referral sources, time on page, and click-throughs. An A/B split-testing framework built in Rails measured real user behavior and iterated page layouts against live traffic to lift click-through rates on the highest-traffic pages."
+        ]
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/assets/images/acg_screenshot.png",
+        "width": 1082,
+        "height": 11264,
+        "alt": "Austin City Guide homepage on a mobile phone",
+        "frame": "phone"
+      }
+    ]
+  }
+]

@@ -1,6 +1,6 @@
 {
   "name": "Alexander Key",
-  "label": "Senior Ruby on Rails Developer",
+  "label": "Senior Developer",
   "contact": {
     "email": "alex@alexanderkey.com",
     "phone": "(817) 614-3338",
@@ -11,7 +11,7 @@
   "jobs": [
     {
       "company": "Reservation Genie",
-      "role": "Lead Ruby on Rails Developer",
+      "role": "Lead Developer",
       "location": "Austin, TX",
       "dates": "2023 – Present",
       "bullets": [
@@ -22,7 +22,7 @@
     },
     {
       "company": "Tally Meals",
-      "role": "Lead Ruby on Rails Developer",
+      "role": "Lead Developer",
       "location": "Austin, TX",
       "dates": "2022 – 2023",
       "bullets": [
@@ -33,7 +33,7 @@
     },
     {
       "company": "88 Restaurants",
-      "role": "Senior Ruby on Rails Developer",
+      "role": "Senior Developer",
       "location": "Austin, TX",
       "dates": "2017 – 2022",
       "bullets": [
