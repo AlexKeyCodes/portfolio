@@ -19,7 +19,7 @@ module.exports = function (eleventyConfig) {
   // Add plugins
   eleventyConfig.addPlugin(sitemap, {
     sitemap: {
-      hostname: 'https://www.alexanderkey.com'
+      hostname: require('./src/_data/client.js').domain
     }
   })
   eleventyConfig.addPlugin(eleventyPluginFilesMinifier)

@@ -84,8 +84,8 @@ src/
 │   ├── images/             # Image assets
 │   └── favicons/           # Favicon files
 ├── index.njk               # Homepage
-├── robots.txt              # Search engine instructions
-└── sitemap.xml             # SEO sitemap template
+├── robots.txt.njk          # Search engine instructions (built to /robots.txt)
+└── sitemap.xml.njk         # SEO sitemap template (built to /sitemap.xml)
 
 dist/                       # Build output (auto-generated, not in git)
 ```
