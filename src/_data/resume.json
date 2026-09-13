@@ -15,9 +15,9 @@
       "location": "Austin, TX",
       "dates": "2023 – Present",
       "bullets": [
-        "Modernized a legacy <strong>Rails 3</strong> restaurant reservation platform by leading a small team through a ground-up rewrite to <strong>Rails 8</strong>, architecting the new application and building its production infrastructure from scratch with Dokku server provisioning and a GitHub Actions CI/CD pipeline.",
-        "Expanded the platform into a new vertical, tour and boat charter operators, by designing and building an end-to-end private charter product: embeddable lead-capture widget, prioritized booking pipeline, quote/deposit/balance invoicing with Stripe, digital waivers, and crew assignment with automated itineraries.",
-        "Enabled clients to track <strong>Google and Meta ad conversions across the entire booking funnel</strong> by white-labeling reservations onto client-owned subdomains, building the multi-tenant routing and automated per-client DNS/SSL provisioning behind it."
+        "Rebuilt a legacy Rails 3 reservation platform from greenfield on <strong>Ruby on Rails 8</strong>, PostgreSQL, and Hotwire, leading a small team to deliver reservations, rentals, private charters, and digital waivers at <strong>50,000+ reservations a year</strong>.",
+        "Built the payment system behind every booking on <strong>Stripe Connect</strong> (connected accounts, platform fees, webhooks, refunds) plus an ActiveMerchant layer for Authorize.Net, NMI, and TrustCommerce, processing <strong>8 figures in revenue per year</strong>.",
+        "Increased client reservations <strong>30%</strong> by launching white-labeled booking subdomains (e.g. book.hauntedatx.com) with host-aware routing and cookie scoping, so UTM and Google Ads attribution survives from the client's site through purchase and clients can see which channels convert."
       ]
     },
     {
@@ -37,16 +37,16 @@
       "location": "Austin, TX",
       "dates": "2017 – 2022",
       "bullets": [
-        "Built and scaled a Rails restaurant management platform to <strong>100+ restaurants</strong> and <strong>$250K+ in annual revenue</strong> by leading a small team of developers from architecture through launch, owning the full stack from application code and PostgreSQL schema design to production servers and deployment.",
-        "Processed <strong>8 figures in payment volume</strong> by architecting the online ordering system end to end: Stripe checkout and refunds, Uber Direct delivery integration, order scheduling, and a full catering system.",
-        "Delivered the platform's most complex feature, live table management, by building real-time table-state synchronization across every device in the restaurant with <strong>ActionCable WebSockets</strong>, giving front-of-house staff a single live view of the floor."
+        "Split the restaurant product out of a shared legacy Rails codebase into a <strong>greenfield multi-tenant platform</strong> spanning online ordering, reservations, live table management, loyalty, and marketing automation, leading a small team and personally authoring <strong>4,400+ commits across 280K lines of application code</strong>, a 140-table MySQL schema, and a 359-file RSpec suite, owning the stack from schema design to production servers.",
+        "Processed <strong>8 figures in payment volume</strong> by architecting the online ordering system end to end: Stripe checkout and refunds, Stripe Connect onboarding so restaurants are paid directly, Uber Direct delivery integration, order scheduling, gift cards and ticketed events, and a full catering system.",
+        "Delivered the platform's most complex feature, live table management, by building real-time table-state synchronization across every device in the restaurant with <strong>ActionCable WebSockets</strong>, a drag-and-drop floor-plan editor, and an availability engine, giving front-of-house staff a single live view of the floor."
       ]
     },
     {
       "company": "Austin City Guide",
       "role": "Full-Stack Developer",
       "location": "Austin, TX",
-      "dates": "2016 – 2017",
+      "dates": "2015 – 2017",
       "bullets": [
         "Modernized a city guide platform running on a <strong>decade-old .NET codebase</strong> by rebuilding it from the ground up in <strong>Ruby on Rails</strong> and PostgreSQL as sole developer.",
         "Achieved <strong>#1 Google rankings for multiple competitive local keywords</strong> by pairing the rebuild with aggressive on-page SEO: content structure, technical optimization, and page-speed work.",
