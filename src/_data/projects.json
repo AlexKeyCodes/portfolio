@@ -34,9 +34,10 @@
     "screenshots": [
       {
         "src": "/assets/images/reservation_genie.png",
-        "width": 1655,
-        "height": 1461,
-        "alt": "Reservation Genie public tour checkout showing ticket quantity, promo code, gift card, and order total"
+        "width": 1200,
+        "height": 928,
+        "alt": "Reservation Genie admin dashboard on an iPad showing the day's tour time slots and a table of reservations with statuses and actions",
+        "plain": true
       }
     ]
   },
