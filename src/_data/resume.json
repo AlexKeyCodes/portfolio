@@ -46,7 +46,7 @@
       "company": "Austin City Guide",
       "role": "Full-Stack Developer",
       "location": "Austin, TX",
-      "dates": "2015 – 2017",
+      "dates": "2016 – 2017",
       "bullets": [
         "Modernized a city guide platform running on a <strong>decade-old .NET codebase</strong> by rebuilding it from the ground up in <strong>Ruby on Rails</strong> and PostgreSQL as sole developer.",
         "Achieved <strong>#1 Google rankings for multiple competitive local keywords</strong> by pairing the rebuild with aggressive on-page SEO: content structure, technical optimization, and page-speed work.",
