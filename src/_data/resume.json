@@ -1,6 +1,6 @@
 {
   "name": "Alexander Key",
-  "label": "Senior Developer",
+  "label": "Senior Full-Stack Rails Developer",
   "contact": {
     "email": "alex@alexanderkey.com",
     "phone": "(817) 614-3338",
@@ -26,16 +26,19 @@
       "location": "Austin, TX",
       "dates": "2022 – 2023",
       "bullets": [
-        "Replaced a failing legacy .NET platform for Greek house meal management by leading a small team through a ground-up Ruby on Rails rebuild, owning architecture, servers, and CI/CD from first commit to a launch serving chapters across multiple universities.",
+        "Replaced a failing legacy .NET platform for Greek house meal management by leading a small team through a ground-up Ruby on Rails rebuild, owning architecture, servers, and CI/CD from first commit to a launch serving 100+ houses across 35+ universities.",
         "Shipped iOS and Android apps from a single Rails codebase using Hotwire Native, letting members reserve meals and late plates against chef-published menus with per-member allergy and dietary tracking, meal-plan limits and billing compliance, and printable kitchen prep lists.",
         "Carried every client's historical data through the replatform by converting the legacy MSSQL database to PostgreSQL, reverse-engineering the old schema and migrating chapters, members, meal plans, and reservation history into the new Rails domain model."
       ]
     },
     {
       "company": "88 Restaurants",
-      "role": "Senior Developer",
       "location": "Austin, TX",
       "dates": "2017 – 2022",
+      "roles": [
+        { "title": "Senior Full-Stack Developer", "dates": "2021 – 2022" },
+        { "title": "Junior Full-Stack Developer", "dates": "2017 – 2021" }
+      ],
       "bullets": [
         "Split the restaurant product out of a shared legacy Rails codebase into a greenfield multi-tenant platform spanning online ordering, reservations, live table management, loyalty, and marketing automation, leading a small team and personally authoring 4,400+ commits across 280K lines of application code, a 140-table MySQL schema, and a 359-file RSpec suite, owning the stack from schema design to production servers.",
         "Processed 8 figures in payment volume by architecting the online ordering system end to end: Stripe checkout and refunds, Stripe Connect onboarding so restaurants are paid directly, Uber Direct delivery integration, order scheduling, gift cards and ticketed events, and a full catering system.",
@@ -44,7 +47,7 @@
     },
     {
       "company": "Austin City Guide",
-      "role": "Full-Stack Developer",
+      "role": "Junior Full-Stack Developer",
       "location": "Austin, TX",
       "dates": "2016 – 2017",
       "bullets": [
