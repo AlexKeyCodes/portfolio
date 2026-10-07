@@ -16,7 +16,7 @@
       "dates": "2023 – Present",
       "bullets": [
         "Rebuilt a legacy Rails 3 reservation platform from greenfield on Ruby on Rails 8, PostgreSQL, and Hotwire, leading a small team to deliver reservations, rentals, private charters, and digital waivers at 50,000+ reservations a year.",
-        "Built the payment system behind every booking on Stripe Connect (connected accounts, platform fees, webhooks, refunds) plus an ActiveMerchant layer for Authorize.Net, NMI, and TrustCommerce, processing 8 figures in revenue per year.",
+        "Built the payment system behind every booking on Stripe Connect (connected accounts, platform fees, webhooks, refunds) plus an ActiveMerchant gateway layer that lets clients bring their own payment processor, processing 8 figures in revenue per year.",
         "Increased client reservations 30% by launching white-labeled booking subdomains (e.g. book.hauntedatx.com) with host-aware routing and cookie scoping, so UTM and Google Ads attribution survives from the client's site through purchase and clients can see which channels convert."
       ]
     },
@@ -26,9 +26,9 @@
       "location": "Austin, TX",
       "dates": "2022 – 2023",
       "bullets": [
-        "Replaced a failing legacy .NET platform for Greek house meal management by leading a small team through a ground-up Ruby on Rails rebuild, owning architecture, servers, and CI/CD from first commit to a launch serving 100+ houses across 35+ universities.",
+        "Replaced a failing legacy PHP API and React Native platform for Greek house meal management by leading a small team through a ground-up Ruby on Rails rebuild, owning architecture, servers, and CI/CD from first commit to a launch serving 100+ houses across 35+ universities.",
         "Shipped iOS and Android apps from a single Rails codebase using Hotwire Native, letting members reserve meals and late plates against chef-published menus with per-member allergy and dietary tracking, meal-plan limits and billing compliance, and printable kitchen prep lists.",
-        "Carried every client's historical data through the replatform by converting the legacy MSSQL database to PostgreSQL, reverse-engineering the old schema and migrating chapters, members, meal plans, and reservation history into the new Rails domain model."
+        "Carried every client's historical data through the replatform by converting the legacy database to PostgreSQL, reverse-engineering the old schema and migrating chapters, members, meal plans, and reservation history into the new Rails domain model."
       ]
     },
     {
@@ -51,9 +51,9 @@
       "location": "Austin, TX",
       "dates": "2016 – 2017",
       "bullets": [
-        "Modernized a city guide platform running on a decade-old .NET codebase by rebuilding it from the ground up in Ruby on Rails and PostgreSQL as sole developer.",
-        "Achieved #1 Google rankings for multiple competitive local keywords by pairing the rebuild with aggressive on-page SEO: content structure, technical optimization, and page-speed work.",
-        "Increased click-through rates on the site's highest-traffic pages by building in-house analytics and an A/B split-testing framework in Rails, measuring real user behavior and then iterating page layouts against live traffic."
+        "Achieved #1 Google rankings for competitive local keywords like \"things to do in Austin\" through on-page SEO, technical optimization, and page-speed work in a Rails rebuild of the legacy .NET site.",
+        "Built in-house analytics in Rails to measure real user behavior across the site's highest-traffic pages.",
+        "Increased click-through rates on the highest-traffic pages with an A/B split-testing system in Rails that tested page layouts against live traffic."
       ]
     }
   ],

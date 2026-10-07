@@ -2,14 +2,14 @@
   {
     "slug": "reservation-genie",
     "name": "Reservation Genie",
-    "metaDescription": "Reservation Genie: a Rails 3 to Rails 8 rewrite of a reservation and ticketing platform for restaurants, tours, and charters, built and led by Alexander Key.",
+    "metaDescription": "Reservation Genie: a Rails 3 to Rails 8 rewrite of a reservation and ticketing platform for tour and charter companies, built and led by Alexander Key.",
     "siteUrl": "https://reservationgenie.com",
     "urlLabel": "reservationgenie.com",
     "role": "Lead Developer",
     "dates": "2023 – Present",
-    "intro": "Reservation Genie is a reservation management and ticket sales platform for restaurants, tour operators, and charter companies. It started as a Rails 3 app; I led a small team through a ground-up rewrite to Rails 8 and built its production infrastructure from scratch.",
+    "intro": "Reservation Genie is a reservation management and ticket sales platform for tour operators and charter companies. It started as a Rails 3 app; I led a small team through a ground-up rewrite to Rails 8 and built its production infrastructure from scratch.",
     "summary": [
-      "Reservation Genie is a reservation management and ticket sales platform for restaurants and tour operators, processing over seven figures in revenue. It started life as a Rails 3 application; I led a small team through a ground-up rewrite to Rails 8 and built its production infrastructure from scratch."
+      "Reservation Genie is a reservation management and ticket sales platform for tour operators and charter companies, processing over seven figures in revenue. It started life as a Rails 3 application; I led a small team through a ground-up rewrite to Rails 8 and built its production infrastructure from scratch."
     ],
     "highlights": [
       {
@@ -49,9 +49,9 @@
     "urlLabel": "tallymeals.com",
     "role": "Lead Developer",
     "dates": "2022 – 2023",
-    "intro": "Tally Meals is a meal reservation platform for college sororities and fraternities. It replaced a failing legacy .NET platform with a ground-up Rails rebuild, and ships iOS and Android apps from the same codebase using Hotwire Native.",
+    "intro": "Tally Meals is a meal reservation platform for college sororities and fraternities. It replaced a failing legacy PHP API and React Native platform with a ground-up Rails rebuild, and ships iOS and Android apps from the same codebase using Hotwire Native.",
     "summary": [
-      "Tally Meals is a meal reservation platform for college sororities and fraternities that streamlines communal dining. It replaced a failing legacy .NET platform with a ground-up Rails rebuild, and ships iOS and Android apps from the same codebase using Hotwire Native."
+      "Tally Meals is a meal reservation platform for college sororities and fraternities that streamlines communal dining. It replaced a failing legacy PHP API and React Native platform with a ground-up Rails rebuild, and ships iOS and Android apps from the same codebase using Hotwire Native."
     ],
     "highlights": [
       {
@@ -67,7 +67,7 @@
         ]
       },
       {
-        "title": "Legacy MSSQL to PostgreSQL migration",
+        "title": "Legacy database to PostgreSQL migration",
         "body": [
           "Carried every client's historical data through the replatform by reverse-engineering the old schema and migrating chapters, members, meal plans, and reservation history into the new Rails domain model."
         ]
@@ -132,9 +132,9 @@
     "urlLabel": "austincityguide.com",
     "role": "Full-Stack Developer",
     "dates": "2016 – 2017",
-    "intro": "Austin City Guide is a city guide CMS that I rebuilt from a decade-old .NET codebase in Ruby on Rails as sole developer. It ranks #1 on Google for competitive local keywords and attracts 100,000+ unique visitors a month.",
+    "intro": "Austin City Guide is a city guide CMS that I rebuilt from a decade-old .NET codebase in Ruby on Rails. It ranks #1 on Google for competitive local keywords and attracts 100,000+ unique visitors a month.",
     "summary": [
-      "Austin City Guide is a content management system that achieved #1 Google rankings for multiple high-competition keywords such as \"things to do in Austin\" and now attracts 100,000+ unique visitors monthly. I rebuilt it from a decade-old .NET codebase in Ruby on Rails as sole developer."
+      "Austin City Guide is a content management system that achieved #1 Google rankings for multiple high-competition keywords such as \"things to do in Austin\" and now attracts 100,000+ unique visitors monthly. I rebuilt it from a decade-old .NET codebase in Ruby on Rails."
     ],
     "highlights": [
       {
