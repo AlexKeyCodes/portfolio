@@ -5,7 +5,7 @@
     "metaDescription": "Reservation Genie: a Rails 3 to Rails 8 rewrite of a reservation and ticketing platform for tour and charter companies, built and led by Alexander Key.",
     "siteUrl": "https://reservationgenie.com",
     "urlLabel": "reservationgenie.com",
-    "role": "Lead Developer",
+    "role": "Senior Software Engineer",
     "dates": "2023 – Present",
     "intro": "Reservation Genie is a reservation management and ticket sales platform for tour operators and charter companies. It started as a Rails 3 app; I led a small team through a ground-up rewrite to Rails 8 and built its production infrastructure from scratch.",
     "summary": [
@@ -47,7 +47,7 @@
     "metaDescription": "Tally Meals: a ground-up Ruby on Rails rebuild of a Greek house meal management platform with Hotwire Native iOS and Android apps, built and led by Alexander Key.",
     "siteUrl": "https://tallymeals.com",
     "urlLabel": "tallymeals.com",
-    "role": "Lead Developer",
+    "role": "Senior Software Engineer",
     "dates": "2022 – 2023",
     "intro": "Tally Meals is a meal reservation platform for college sororities and fraternities. It replaced a failing legacy PHP API and React Native platform with a ground-up Rails rebuild, and ships iOS and Android apps from the same codebase using Hotwire Native.",
     "summary": [
