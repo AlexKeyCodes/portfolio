@@ -16,8 +16,8 @@
       "dates": "2023 – Present",
       "bullets": [
         "Rebuilt a legacy Rails 3 reservation platform from greenfield on Ruby on Rails 8, PostgreSQL, and Hotwire, leading a small team to deliver reservations, rentals, private charters, and digital waivers at 50,000+ reservations a year.",
-        "Built the payment system behind every booking on Stripe Connect (connected accounts, platform fees, webhooks, refunds) plus an ActiveMerchant gateway layer that lets clients bring their own payment processor, processing 7 figures in revenue per year.",
-        "Increased client reservations 30% by launching white-labeled booking subdomains (e.g. book.hauntedatx.com) with host-aware routing and cookie scoping, so UTM and Google Ads attribution survives from the client's site through purchase and clients can see which channels convert."
+        "Built the payment system behind every booking on Stripe Connect (connected accounts, platform fees, webhooks, refunds) plus an ActiveMerchant gateway layer that lets clients bring their own payment processor, processing 8 figures in revenue per year.",
+        "Increased client reservations 30% by launching white-labeled booking subdomains (e.g. book.clientdomain.com) with host-aware routing and cookie scoping, so UTM and Google Ads attribution survives from the client's site through purchase and clients can see which channels convert."
       ]
     },
     {
