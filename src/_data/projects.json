@@ -90,8 +90,8 @@
     "siteUrl": "https://88restaurants.com",
     "urlLabel": "88restaurants.com",
     "role": "Senior Developer",
-    "dates": "2017 – 2022",
-    "intro": "88 Restaurants is an all-in-one restaurant management platform used by 100+ restaurants: live table management, online ordering, and reservations. I led a small team from architecture through launch and owned the full stack for five years.",
+    "dates": "2018 – 2022",
+    "intro": "88 Restaurants is an all-in-one restaurant management platform used by 100+ restaurants: live table management, online ordering, and reservations. I led a small team from architecture through launch and owned the full stack for four years.",
     "summary": [
       "88 Restaurants is an all-in-one restaurant management platform used by 100+ restaurants and processing eight figures in payment volume. I led a small team from architecture through launch, owning the full stack from application code and PostgreSQL schema design to production servers and deployment."
     ],
@@ -131,7 +131,7 @@
     "siteUrl": "https://austincityguide.com",
     "urlLabel": "austincityguide.com",
     "role": "Full-Stack Developer",
-    "dates": "2016 – 2017",
+    "dates": "2016 – 2018",
     "intro": "Austin City Guide is a city guide CMS that I rebuilt from a decade-old .NET codebase in Ruby on Rails. It ranks #1 on Google for competitive local keywords and attracts 100,000+ unique visitors a month.",
     "summary": [
       "Austin City Guide is a content management system that achieved #1 Google rankings for multiple high-competition keywords such as \"things to do in Austin\" and now attracts 100,000+ unique visitors monthly. I rebuilt it from a decade-old .NET codebase in Ruby on Rails."

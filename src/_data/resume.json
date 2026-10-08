@@ -34,10 +34,10 @@
     {
       "company": "88 Restaurants",
       "location": "Austin, TX",
-      "dates": "2017 – 2022",
+      "dates": "2018 – 2022",
       "roles": [
         { "title": "Senior Full-Stack Developer", "dates": "2021 – 2022" },
-        { "title": "Junior Full-Stack Developer", "dates": "2017 – 2021" }
+        { "title": "Junior Full-Stack Developer", "dates": "2018 – 2021" }
       ],
       "bullets": [
         "Split the restaurant product out of a shared legacy Rails codebase into a greenfield multi-tenant platform spanning online ordering, reservations, live table management, loyalty, and marketing automation, leading a small team and personally authoring 4,400+ commits across 280K lines of application code, a 140-table MySQL schema, and a 359-file RSpec suite, owning the stack from schema design to production servers.",
@@ -49,7 +49,7 @@
       "company": "Austin City Guide",
       "role": "Junior Full-Stack Developer",
       "location": "Austin, TX",
-      "dates": "2016 – 2017",
+      "dates": "2016 – 2018",
       "bullets": [
         "Achieved #1 Google rankings for competitive local keywords like \"things to do in Austin\" through on-page SEO, technical optimization, and page-speed work in a Rails rebuild of the legacy .NET site.",
         "Built in-house analytics in Rails to measure real user behavior across the site's highest-traffic pages.",
