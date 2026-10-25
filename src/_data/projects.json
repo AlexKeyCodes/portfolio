@@ -6,7 +6,7 @@
     "siteUrl": "https://reservationgenie.com",
     "urlLabel": "reservationgenie.com",
     "role": "Senior Software Engineer",
-    "dates": "2023 – Present",
+    "dates": "2016 – Present",
     "intro": "Reservation Genie is a reservation management and ticket sales platform for tour operators and charter companies. It started as a Rails 3 app; I led a small team through a ground-up rewrite to Rails 8 and built its production infrastructure from scratch.",
     "summary": [
       "Reservation Genie is a reservation management and ticket sales platform for tour operators and charter companies, processing over seven figures in revenue. It started life as a Rails 3 application; I led a small team through a ground-up rewrite to Rails 8 and built its production infrastructure from scratch."
@@ -48,7 +48,7 @@
     "siteUrl": "https://tallymeals.com",
     "urlLabel": "tallymeals.com",
     "role": "Senior Software Engineer",
-    "dates": "2022 – 2023",
+    "dates": "2025 – Present",
     "intro": "Tally Meals is a meal reservation platform for college sororities and fraternities. It replaced a failing legacy PHP API and React Native platform with a ground-up Rails rebuild, and ships iOS and Android apps from the same codebase using Hotwire Native.",
     "summary": [
       "Tally Meals is a meal reservation platform for college sororities and fraternities that streamlines communal dining. It replaced a failing legacy PHP API and React Native platform with a ground-up Rails rebuild, and ships iOS and Android apps from the same codebase using Hotwire Native."
@@ -89,8 +89,8 @@
     "metaDescription": "88 Restaurants: a Rails restaurant management platform serving 100+ restaurants with live table management, online ordering, and reservations, built and led by Alexander Key.",
     "siteUrl": "https://88restaurants.com",
     "urlLabel": "88restaurants.com",
-    "role": "Senior Developer",
-    "dates": "2018 – 2022",
+    "role": "Senior Software Engineer",
+    "dates": "2021 – Present",
     "intro": "88 Restaurants is an all-in-one restaurant management platform used by 100+ restaurants: live table management, online ordering, and reservations. I led a small team from architecture through launch and owned the full stack for four years.",
     "summary": [
       "88 Restaurants is an all-in-one restaurant management platform used by 100+ restaurants and processing eight figures in payment volume. I led a small team from architecture through launch, owning the full stack from application code and PostgreSQL schema design to production servers and deployment."
@@ -130,8 +130,8 @@
     "metaDescription": "Austin City Guide: a decade-old .NET city guide rebuilt in Ruby on Rails by Alexander Key, now ranking #1 for competitive Austin keywords with 100,000+ monthly visitors.",
     "siteUrl": "https://austincityguide.com",
     "urlLabel": "austincityguide.com",
-    "role": "Full-Stack Developer",
-    "dates": "2016 – 2018",
+    "role": "Senior Software Engineer",
+    "dates": "2020 – 2022",
     "intro": "Austin City Guide is a city guide CMS that I rebuilt from a decade-old .NET codebase in Ruby on Rails. It ranks #1 on Google for competitive local keywords and attracts 100,000+ unique visitors a month.",
     "summary": [
       "Austin City Guide is a content management system that achieved #1 Google rankings for multiple high-competition keywords such as \"things to do in Austin\" and now attracts 100,000+ unique visitors monthly. I rebuilt it from a decade-old .NET codebase in Ruby on Rails."

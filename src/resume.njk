@@ -8,20 +8,22 @@ description: "Resume of Alexander Key, a senior Ruby on Rails developer with 10 
 {% block head %}
 <style>
   @media print {
-    @page { margin: 0.45in 0.55in; }
+    @page { margin: 0.35in 0.55in; }
     header, footer, .no-print { display: none !important; }
     .resume-band { padding: 0 !important; }
     #resume { padding: 0 !important; max-width: none !important; }
     #resume h1 { font-size: 22px !important; }
     #resume .headline { font-size: 12px !important; margin-top: 2px !important; }
     #resume h2 { font-size: 13px !important; padding-bottom: 2px !important; }
-    #resume .summary { margin-top: 8px !important; }
-    #resume .experience-title { margin-top: 14px !important; }
-    #resume .education, #resume .skills { margin-top: 14px !important; }
-    #resume h3, #resume p, #resume li, #resume dt, #resume dd, #resume dl > div { font-size: 10.5px !important; line-height: 1.4 !important; }
-    #resume .job { break-inside: avoid; margin-top: 8px !important; }
-    #resume ul { margin-top: 3px !important; }
-    #resume li { margin-top: 2px !important; }
+    #resume .experience-title { margin-top: 10px !important; }
+    #resume .education, #resume .skills { margin-top: 10px !important; }
+    #resume h3, #resume h4, #resume p, #resume li, #resume dt, #resume dd, #resume dl > div { font-size: 10.25px !important; line-height: 1.35 !important; }
+    #resume .employer { margin-top: 8px !important; }
+    #resume .employer-description { margin-top: 2px !important; }
+    #resume .job { break-inside: avoid; margin-top: 6px !important; }
+    #resume ul { margin-top: 2px !important; }
+    #resume li { margin-top: 1px !important; }
+    #resume .education, #resume .skills { break-inside: avoid; }
     a { text-decoration: none; color: inherit; }
   }
 </style>
@@ -50,40 +52,38 @@ description: "Resume of Alexander Key, a senior Ruby on Rails developer with 10 
       >
     </div>
 
-    <p class="summary mt-5 text-sm leading-6 text-gray-700">{{ resume.summary }}</p>
-
     <h2 class="experience-title mt-10 border-b-2 border-gray-900 pb-1 text-xl font-bold tracking-tight text-gray-900">Experience</h2>
 
-    {% for job in resume.jobs %}
-      <div class="job mt-6">
-        {% if job.roles %}
+    {% for employer in resume.experience %}
+      <div class="employer mt-6">
         <div class="flex flex-wrap items-baseline justify-between gap-x-4">
           <h3 class="text-sm font-semibold text-gray-900">
-            {{ job.company }}
-            <span class="font-normal text-gray-500">— {{ job.location }}</span>
+            {{ employer.company }}
+            <span class="font-normal text-gray-500">— {{ employer.location }}</span>
           </h3>
-          <p class="text-sm font-medium text-gray-700">{{ job.dates }}</p>
+          <p class="text-sm font-medium text-gray-700">{{ employer.dates }}</p>
         </div>
-        {% for r in job.roles %}
+        <p class="employer-description mt-1 text-sm leading-6 text-gray-600">{{ employer.description }}</p>
+        {% for r in employer.roles %}
         <div class="flex flex-wrap items-baseline justify-between gap-x-4 pl-4">
           <p class="text-sm font-semibold text-gray-900">{{ r.title }}</p>
           <p class="text-sm text-gray-500">{{ r.dates }}</p>
         </div>
         {% endfor %}
-        {% else %}
-        <div class="flex flex-wrap items-baseline justify-between gap-x-4">
-          <h3 class="text-sm font-semibold text-gray-900">
-            {{ job.role }}
-            <span class="font-normal text-gray-500">— {{ job.company }}, {{ job.location }}</span>
-          </h3>
-          <p class="text-sm font-medium text-gray-700">{{ job.dates }}</p>
-        </div>
-        {% endif %}
-        <ul class="mt-2 list-disc space-y-1.5 pl-5 text-sm leading-6 text-gray-700">
-          {% for bullet in job.bullets %}
-            <li>{{ bullet | safe }}</li>
-          {% endfor %}
-        </ul>
+
+        {% for product in employer.products %}
+          <div class="job mt-5">
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4">
+              <h4 class="text-sm font-semibold text-gray-900">{{ product.name }}</h4>
+              <p class="text-sm font-medium text-gray-700">{{ product.dates }}</p>
+            </div>
+            <ul class="mt-2 list-disc space-y-1.5 pl-5 text-sm leading-6 text-gray-700">
+              {% for bullet in product.bullets %}
+                <li>{{ bullet | safe }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
       </div>
     {% endfor %}
 
